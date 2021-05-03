@@ -1,0 +1,8 @@
+<div>
+    {% url 'index' as index_url %}
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'index' %}">Home</a>{% endif %}</span>
+    {% url 'patients' as patients_url %}
+    <span>{% if request.path == patients_url %}Patients{% else %}<a href="{% url 'patients' %}">Patients</a>{% endif %}</span>
+    {% url 'dashboard' as dash_url %}
+    <span>{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{% url 'dashboard' %}">Tableau de bord</a>{% endif %}</span>
+</div>
