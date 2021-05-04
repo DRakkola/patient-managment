@@ -1,8 +1,17 @@
-<div>
+<nav>
     {% url 'index' as index_url %}
-    <span>{% if request.path == index_url %}Home{% else %}<a href="{% url 'index' %}">Home</a>{% endif %}</span>
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{{index_url}}">Home</a>{% endif %}</span>
     {% url 'patients' as patients_url %}
-    <span>{% if request.path == patients_url %}Patients{% else %}<a href="{% url 'patients' %}">Patients</a>{% endif %}</span>
+    <span>{% if request.path == patients_url %}Patients{% else %}<a href="{{patients_url}}">Patients</a>{% endif %}</span>
     {% url 'dashboard' as dash_url %}
-    <span>{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{% url 'dashboard' %}">Tableau de bord</a>{% endif %}</span>
-</div>
+    <span>{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{{dash_url}}">Tableau de bord</a>{% endif %}</span>
+    <span style="float:right">
+        {% if user.is_authenticated %}
+            {% url 'profile' as profile_url %}
+            <span>hi {% if request.path == profile_url %} {{ user.username}}{% else %}<a href="{% url 'profile' %}">{{ user.username}}</a> {% endif %}</span>
+            <span><a href="{% url 'logout' %}">Logout</a></span>
+        {% else %}
+        <span><a href="{% url 'login' %}">Login</a></span>
+        {% endif %}
+    </span>
+</nav>
