@@ -3,6 +3,29 @@
 
 {%block content %} 
 <h1>
-    {{ user.username}}'s profile
-</h1> 
+    {{user.get_full_name }} (@{{ user.username}})
+</h1>
+
+{% with profile=user.profile %}
+    {% if profile %}
+        <h2>
+            {{ profile.Group|default:"" }}
+        </h2>
+        <div>
+            {{ profile.bio|default:"vide"}}
+        </div>
+        <div>
+            {{ user.email|default:"vide"}}
+        </div>
+        <div>
+            rights:
+            {% for Rights in profile.Rights.all %}
+                <span>
+                    {{ Rights.Details}}{% if not forloop.last %}<br/> {% endif %}
+                </span>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
 {% endblock %}
