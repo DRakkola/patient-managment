@@ -5,13 +5,4 @@
     <span>{% if request.path == patients_url %}Patients{% else %}<a href="{{patients_url}}">Patients</a>{% endif %}</span>
     {% url 'public:dashboard' as dash_url %}
     <span>{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{{dash_url}}">Tableau de bord</a>{% endif %}</span>
-    <span style="float:right">
-        {% if user.is_authenticated %}
-            {% url 'accounts:profile' as profile_url %}
-            <span>hi {% if request.path == profile_url %} {{ user.username}}{% else %}<a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span>
-            <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
-        {% else %}
-        <span><a href="{% url 'accounts:login' %}">Login</a></span>
-        {% endif %}
-    </span>
 </nav>

@@ -6,6 +6,16 @@
             "driver": "SQLite",
             "database": "${workspaceFolder:patient-managment}/db.sqlite3",
             "name": "patientDB"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "postgres",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "postgres"
         }
     ],
     "sqltools.useNodeRuntime": true
