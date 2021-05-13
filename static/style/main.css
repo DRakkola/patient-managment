@@ -1,0 +1,8 @@
+body[themebg-pattern="pattern2"] {
+    background-image: url(../image/greek-vase.png);
+}
+.common-img-bg {
+    background-size: cover;
+    background: url(../image/greek-vase.png); 
+    height: 100%;
+    }
