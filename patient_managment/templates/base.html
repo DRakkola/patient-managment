@@ -31,12 +31,10 @@
     <nav>
       Hospital Militaire
       <span style="float: right">
-        {% if user.is_authenticated %} {% url 'accounts:profile' as profile_url
-        %}
+        {% if user.is_authenticated %} {% url 'accounts:profile' as profile_url %}
         <span
-        >hi {% if request.path == profile_url %} {{ user.username}}{% else
-          %}<a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span
-          >
+        >hi {% if request.path == profile_url %} {{ user.username}}{% else%}
+        <a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span>
           <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
           {% else %}
           <span><a href="{% url 'accounts:login' %}">Login</a></span>

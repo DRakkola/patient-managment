@@ -6,3 +6,9 @@ body[themebg-pattern="pattern2"] {
     background: url(../image/greek-vase.png); 
     height: 100%;
     }
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 75%;
+}
