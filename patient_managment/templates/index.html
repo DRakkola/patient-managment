@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Home{% endblock %} 
 
 {%block content %} 
-<h1>
-    Template Home page
-</h1> 
+    <div class="patient p-2 d-sm-flex flex-sm-column text-center">
+        <div class="mb-auto mt-4 p-2 text-center">
+            <span class="oi oi-vertical-align-bottom"></span>
+        </div>
+        {% url 'public:register' as register_url %}
+        {% url 'public:patients' as patient_url %}
+        <a href="{{register_url}}" class="mb-2 btn-xl btn btn-primary p-2 home_btn " role="button" aria-pressed="true"><span class="oi oi-account-login mx-2"></span>Ajouter</a>
+        <a href="{{patient_url}}" class="mb-5 btn-xl btn btn-outline-info p-2 home_btn " role="button" aria-pressed="true"><span class="oi oi-eye mx-2"></span>Rechercher</a>
+    </div>
+    <div class="patient_dash p-0">
+        <div class="top d-sm-flex flex-sm-column justify-content-around wrap container-wrap">
+            <p class="top pl-4 container-wrap" id="title">Some count that matters</p>
+            <p class="top pl-4" id="subtitle">Our achievement in the journey depicted in numbers</p>
+            <div class="top d-sm-flex flex-sm-row justify-content-around flex-wrap" id="blobs">
+                <div class="test stack-top p-2" id="octagon"></div>
+                <div class="test stack-top p-2" id="octagon"></div>
+                <div class="test stack-top p-2" id="octagon"></div>
+                <div class="test stack-top p-2" id="octagon"></div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

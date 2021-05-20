@@ -1,14 +1,22 @@
 body[themebg-pattern="pattern2"] {
-    background-image: url(../image/greek-vase.png);
+  background-image: url(../image/greek-vase.png);
 }
 .common-img-bg {
-    background-size: cover;
-    background: url(../image/greek-vase.png); 
-    height: 100%;
-    }
+  background-size: cover;
+  background: url(../image/greek-vase.png);
+  height: 100%;
+}
 
-img {
-    vertical-align: middle;
-    border-style: none;
-    width: 75%;
+#logo {
+  vertical-align: middle;
+  border-style: none;
+  width: 75%;
+}
+@font-face {
+  font-family: 'manrope';
+  src: url('./fonts/manrope-variablefont_wght-webfont.woff2') format('woff2'),
+       url('./fonts/manrope-variablefont_wght-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }

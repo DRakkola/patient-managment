@@ -17,3 +17,7 @@ def patients(request: HttpRequest) -> HttpResponse:
 def dashboard(request: HttpRequest) -> HttpResponse:
     print(request.POST)
     return render(request, "dashboard.html")
+
+def register(request: HttpRequest) -> HttpResponse:
+    print(request.POST)
+    return render(request, "register.html")

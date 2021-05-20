@@ -1,8 +1,34 @@
-<nav>
-    {% url 'public:index' as index_url %}
-    <span>{% if request.path == index_url %}Home{% else %}<a href="{{index_url}}">Home</a>{% endif %}</span>
-    {% url 'public:patients' as patients_url %}
-    <span>{% if request.path == patients_url %}Patients{% else %}<a href="{{patients_url}}">Patients</a>{% endif %}</span>
-    {% url 'public:dashboard' as dash_url %}
-    <span>{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{{dash_url}}">Tableau de bord</a>{% endif %}</span>
+<!--
+
+        <div class="navbar navbar-default">
+                {% url 'public:index' as index_url %}
+                <span class="col-sm-1">{% if request.path == index_url %}Home{% else %}<a href="{{index_url}}">Home</a>{% endif %}</span>
+                {% url 'public:patients' as patients_url %}
+                <span class="col-sm-1">{% if request.path == patients_url %}Patients{% else %}<a href="{{patients_url}}">Patients</a>{% endif %}</span>
+                {% url 'public:dashboard' as dash_url %}
+                <span class="col-sm-1">{% if request.path == dash_url %}Tableau de bord{% else %}<a href="{{dash_url}}">Tableau de bord</a>{% endif %}</span>
+        </div>
+-->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #EFEFEF;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 10px;">
+                <div class="navbar-nav">
+                        {% url 'public:index' as index_url %}      
+                        {% if request.path == index_url %}Home{% else %}<a class="nav-item nav-link" href="{{index_url}}">Home</a>{% endif %}
+                        {% url 'public:patients' as patients_url %}
+                        {% if request.path == patients_url %}Patients{% else %}<a class="nav-item nav-link" href="{{patients_url}}">Patients</a>{% endif %}
+                        {% url 'public:dashboard' as dash_url %}
+                        {% if request.path == dash_url %}Tableau de bord{% else %}<a class="nav-item nav-link" href="{{dash_url}}">Tableau de bord</a>{% endif %}
+                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                        </li>
+                </div>
+        </div>
 </nav>

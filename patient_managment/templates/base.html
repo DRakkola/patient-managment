@@ -20,7 +20,10 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="{% static 'theme/assets/css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'theme/assets/css/jquery.mCustomScrollbar.css' %}">
+    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/index.css' %}">
     
     
     
@@ -28,22 +31,28 @@
   <body>
     {% url 'accounts:login' as login_url %}
     {% if request.path != login_url %}
-    <nav>
-      Hospital Militaire
-      <span style="float: right">
-        {% if user.is_authenticated %} {% url 'accounts:profile' as profile_url %}
-        <span
-        >hi {% if request.path == profile_url %} {{ user.username}}{% else%}
-        <a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span>
-          <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
-          {% else %}
-          <span><a href="{% url 'accounts:login' %}">Login</a></span>
-          {% endif %}
-        </span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light top_bar" style="height: max-content;">
+      <img class="mainlogo navbar-brand " src="{% static 'image/main_logo.svg' %}" alt="logo.png">
+      <button class="navbar-toggler rounded-circle border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-person" title="person" aria-hidden="true"></span></button>
+      <div class="collapse navbar-collapse justify-content-end userlog" id="navbarSupportedContent">
+        <ul class="navbar-nav" style="margin-right: 18px;margin-left: 400px;">
+          <li class="nav-item ">
+            {% if user.is_authenticated %} {% url 'accounts:profile' as profile_url %}
+            <span>hi {% if request.path == profile_url %} {{ user.username}}{% else%}
+              <a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span>
+              <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
+              {% else %}
+              <span><a href="{% url 'accounts:login' %}">Login</a></span>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
       </nav>
       {% include 'navbar.html' %}
       {% endif %}
-      <main>{% block content %} {% endblock %}</main>
+      <main class="container-fluid d-flex flex-row align-items-center flex-wrap justify-content-center aligh-self-center " style="min-height: 550px;">{% block content %} {% endblock %}</main>
+      
       
       
       <script type="text/javascript" src="{% static 'theme/assets/js/jquery/jquery.min.js'%}"></script>
@@ -57,9 +66,8 @@
 <!-- am chart -->
 <script src="{% static 'theme/assets/pages/widget/amchart/amcharts.min.js'%}"></script>
 <script src="{% static 'theme/assets/pages/widget/amchart/serial.min.js'%}"></script>
-<!-- Todo js
-  <script type="text/javascript " src="{% static 'theme/assets/pages/todo/todo.js "></script>
--->
+<!-- Todo js -->
+<!-- <script type="text/javascript " src="{% static 'theme/assets/pages/todo/todo.js "></script> -->
 <!-- Custom js -->
 <script type="text/javascript" src="{% static 'theme/assets/pages/dashboard/custom-dashboard.js'%}"></script>
 <script type="text/javascript" src="{% static 'theme/assets/js/script.js'%}"></script>
