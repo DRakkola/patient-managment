@@ -1,0 +1,171 @@
+{% extends 'base.html' %} 
+{% block title %}register{% endblock %} 
+{% block content %}
+<script>
+    function appendList() {
+    var ul = document.getElementById('listitems');
+    var li = document.createElement('li');
+    var input = document.createElement('input');
+    var item = document.getElementById('item');
+    input.value = item.value;
+    input.setAttribute("name","tell")
+    li.appendChild(input);
+    ul.appendChild(li);
+    item.value = '' ;
+    }
+</script>
+<form class="row g-3 needs-validation flex-wrap mt-5" novalidate style="width: 60%;" method="POST">
+{% csrf_token %}
+  <div class="col-md-6">
+    <label for="validationCustom01" class="form-label">Nom</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationCustom01"
+      value="Mark"
+      name="name"
+      required
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-3" id="date">
+    <label for="validationCustom01" class="form-label">Date de naissance</label>
+    <input
+      type="date"
+      class="form-control"
+      id="validationCustom01"
+      value="Mark"
+      name="age"
+      required
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <div class="col-md-3" id="genre">
+    <label for="validationCustom04" class="form-label">Sexe</label>
+    <select class="form-select" id="validationCustom04" name="genre" required>
+      <option selected disabled value="">...</option>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select>
+    <div class="valid-feedback">Looks good!</div>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3" id="grade">
+    <label for="validationCustom04" class="form-label">Grade</label>
+    <select class="form-select" id="validationCustom04" name="grade" required>
+      <option selected disabled value="">...</option>
+      <option value="Civile">Civile</option>
+      <option value="Caporal">Caporal</option>
+      <option value="Caporal-chef">Caporal-chef</option>
+      <option value="Sergent">Sergent</option>
+      <option value="Sergent-chef">Sergent-chef</option>
+      <option value="Adjudant">Adjudant</option>
+      <option value="Adjudant-chef">Adjudant-chef</option>
+      <option value="Sous-lieutenant">Sous-lieutenant</option>
+      <option value="Lieutenant">Lieutenant</option>
+      <option value="Capitaine">Capitaine</option>
+      <option value="Commandant">Commandant</option>
+      <option value="Lieutenant-colonel">Lieutenant-colonel</option>
+      <option value="Colonel-major">Colonel-major</option>
+      <option value="General">Général de brigade</option>
+    </select>
+    <div class="valid-feedback">Looks good!</div>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3" id="Mlle">
+    <label class="form-label">Mlle</label>
+    <input type="text" class="form-control" name="mlle"/>
+  </div>
+  <div class="col-md-3" id="proffession">
+    <label class="form-label">Proffession</label>
+    <input type="text" class="form-control" name="profession"/>
+  </div>
+  <div class="col-md-3" id="corps">
+    <label class="form-label">Corps</label>
+    <input type="text" class="form-control" name="corps" />
+  </div>
+  <div class="col-md-7" id="family-stat">
+    <label class="form-label">statue familiale</label>
+    <input type="text" class="form-control" name="family_stats"/>
+  </div>
+  <div class="col-md-5" id="Hospital">
+    <label class="form-label">Service Hospitalier</label>
+    <input type="text" class="form-control" name="hospital_service" />
+  </div>
+  <div class="col-md-12">
+    <label for="validationCustom05" class="form-label">Adress</label>
+    <input type="text" class="form-control" id="validationCustom05" name="adress" required />
+    <div class="invalid-feedback">Please provide a valid Adress.</div>
+  </div>
+    <div class="col-md-6">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <div class="input-group input-group-sm" id="validationCustom05">
+          <input type="number" min="11111111" max="99999999" class="form-control"  id="item" />
+          <button type="button" class="btn btn-outline-secondary" onclick="appendList()">ajouter</button>
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" name="tel" id="listitems" required>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="validationCustom05" class="form-label">Email</label>
+        <input type="email" class="form-control" id="validationCustom05" required />
+        <div class="invalid-feedback">Please provide a valid Email.</div>
+      </div>
+  
+
+  <div class="col-12">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="invalidCheck"
+        required
+      />
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+  
+  {% if msg != '' %}
+      {{msg}}   
+  {% endif %}
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      "use strict";
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    })();
+  </script>
+</form>
+{% endblock %}

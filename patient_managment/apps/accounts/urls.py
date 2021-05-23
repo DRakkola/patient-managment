@@ -14,4 +14,6 @@ urlpatterns = [
     #),
     path("logout", auth_views.LogoutView.as_view(), name="logout"),
     path("login", views.loginPage, name="login"),
+    path("register",views.register, name="register"),
+    path("patient_form", views.patient_form, name="patient_form"),
 ]

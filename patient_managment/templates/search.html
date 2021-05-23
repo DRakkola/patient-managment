@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %} 
+{% load static %}
+
+{%block content %}
+<script>
+    $(document).ready(function () {
+        $('#dtBasicExample').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+    });
+</script> 
+<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <caption>List of Patients</caption>
+    <thead>
+        <tr>
+            <th class="th-sm" scope="col">#</th>
+            <th class="th-sm" scope="col">namet</th>
+            <th class="th-sm" scope="col">grade</th>
+            <th class="th-sm" scope="col">sexe</th>
+            <th class="th-sm" scope="col">age</th>
+        </tr>
+    </thead>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+        <tbody>
+            {% for patient in Patient_number %}
+            <tr>
+                <td>{{patient.id}}</td>
+                <td>{{ patient.name}}</td>
+                <td>{{ patient.grade }}</td>
+                <td>{{ patient.sex }}</td>
+                <td>{{ patient.age }}</td>
+            </tr>
+            <tr>
+                <td>{{patient.id}}</td>
+                <td>{{ patient.name}}</td>
+                <td>{{ patient.grade }}</td>
+                <td>{{ patient.sex }}</td>
+                <td>{{ patient.age }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </div>
+    </table>
+    {% endblock %}

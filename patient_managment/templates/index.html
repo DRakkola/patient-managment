@@ -7,7 +7,7 @@
         <div class="mb-auto mt-4 p-2 text-center">
             <span class="oi oi-vertical-align-bottom"></span>
         </div>
-        {% url 'public:register' as register_url %}
+        {% url 'accounts:register' as register_url %}
         {% url 'public:patients' as patient_url %}
         <a href="{{register_url}}" class="mb-2 btn-xl btn btn-primary p-2 home_btn " role="button" aria-pressed="true"><span class="oi oi-account-login mx-2"></span>Ajouter</a>
         <a href="{{patient_url}}" class="mb-5 btn-xl btn btn-outline-info p-2 home_btn " role="button" aria-pressed="true"><span class="oi oi-eye mx-2"></span>Rechercher</a>
