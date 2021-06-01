@@ -13,7 +13,11 @@ urlpatterns = [
     #    name="login",
     #),
     path("logout", auth_views.LogoutView.as_view(), name="logout"),
+    path("patients", views.patients, name="patients"),
     path("login", views.loginPage, name="login"),
     path("register",views.register, name="register"),
-    path("patient_form", views.patient_form, name="patient_form"),
+    path("patients",views.patients, name="patients"),
+    path("patient_profile", views.patient_profile, name="patient_profile"),
+    path("dossier",views.dossier,name="dossier"),
+     path("patient_form",views.patient_form,name="patient_form")
 ]

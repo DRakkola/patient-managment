@@ -278,7 +278,7 @@ class DjangoSession(models.Model):
 
 class Dossier(models.Model):
     patientid = models.ForeignKey('Patient', models.DO_NOTHING, db_column='patientid')
-    formid = models.ForeignKey('Form', models.DO_NOTHING, db_column='formid')
+    formid = models.ForeignKey('Form', models.DO_NOTHING, db_column='formid', null=True)
 
     class Meta:
         managed = False

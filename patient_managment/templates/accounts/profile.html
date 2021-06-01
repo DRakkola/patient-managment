@@ -8,23 +8,26 @@
 
 {% with profile=user.profile %}
     {% if profile %}
+    <div class=" d-flex row">
+
         <h2>
             {{ profile.Group|default:"" }}
         </h2>
-        <div>
+        <div class="m-2">
             {{ profile.bio|default:"vide"}}
         </div>
-        <div>
+        <div class="m-1">
             {{ user.email|default:"vide"}}
         </div>
-        <div>
+        <div class="m-1">
             rights:
             {% for Rights in profile.Rights.all %}
-                <span>
-                    {{ Rights.Details}}{% if not forloop.last %}<br/> {% endif %}
-                </span>
+            <span>
+                {{ Rights.Details}}{% if not forloop.last %}<br/> {% endif %}
+            </span>
             {% endfor %}
         </div>
+    </div>
     {% endif %}
 {% endwith %}
 

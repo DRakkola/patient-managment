@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %} 
+
+{%block content %} 
+<h1>
+    Dossiers patient (# {{ dossier.id}})
+</h1>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-sm-4" style="width: 400px">
+            {% for patient in patients %}
+            <h1>
+                {{patient.name }} (#{{ patient.id}})
+            </h1>
+            <div class=" d-flex row justify-content-center">
+                
+                <h2>
+                    {{ patient.grade|default:"" }}
+                </h2>
+                <div class="m-2">
+                    {{ patient.sex|default:""}}
+                </div>
+                <div class="m-1">
+                    {{ patient.profession|default:""}}
+                </div>
+                <div class="m-1">
+                    num:<br/>
+                    {% for tel in Phone %}
+                    <span>
+                        {{ tel.number}}<br/>
+                    </span>
+                    {% endfor %}
+                </div>
+                <div class="m-1">
+                    {{ patient.family_stats|default:""}}
+                </div>
+                <div class="m-1">
+                    {{ patient.hospital_service|default:""}}
+                </div>
+                <div class="m-1">
+                    {{ patient.adresse|default:""}}
+                </div>
+                <div class="m-1">
+                    {{ patient.age|default:""}}
+                </div>
+                {% url 'accounts:add_dossier' as adddoss_url %} 
+                <form method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-primary " href="{{adddoss_url}}" type="submit" name="run_script" role="button" style="width: 50%;">cree un nouveau dossier</button>
+                </form>
+                {% endfor %}
+        </div>
+    </div>
+    <div class="row d-flex flex-wrap" style="width: 900px;">
+        <div class="card col" style="width: 16rem;">
+            <div class="card-body">
+                <h5 class="card-title">ajouter des photos</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        {% url 'accounts:patient_form' as form_url %}
+        <div class="card col" style="width: 16rem;">
+            <div class="card-body">
+                <h5 class="card-title">Ajouter un formulaire</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="{{form_url}}" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card col" style="width: 16rem;">
+            <div class="card-body">
+                <h5 class="card-title">ajouter un blilan</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card col" style="width: 16rem;">
+            <div class="card-body">
+                <h5 class="card-title">voir dossier</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    </div> 
+    
+    {% endblock %}

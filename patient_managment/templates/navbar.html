@@ -16,7 +16,7 @@
                 <div class="navbar-nav">
                         {% url 'public:index' as index_url %}      
                         {% if request.path == index_url %}Home{% else %}<a class="nav-item nav-link" href="{{index_url}}">Home</a>{% endif %}
-                        {% url 'public:patients' as patients_url %}
+                        {% url 'accounts:patients' as patients_url %}
                         {% if request.path == patients_url %}Patients{% else %}<a class="nav-item nav-link" href="{{patients_url}}">Patients</a>{% endif %}
                         {% url 'public:dashboard' as dash_url %}
                         {% if request.path == dash_url %}Tableau de bord{% else %}<a class="nav-item nav-link" href="{{dash_url}}">Tableau de bord</a>{% endif %}

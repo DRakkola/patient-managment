@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock %} 
+
+{%block content %} 
+<style>
+    .oi{
+        font-size: 10px;
+    }
+    .btn-danger{
+        padding: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+</style>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-sm-4">
+             
+<h1>
+    {{patient.name }} (#{{ patient.id}})
+</h1>
+    <div class=" d-flex row justify-content-center">
+
+        <h2>
+            {{ patient.grade|default:"" }}
+        </h2>
+        <div class="m-2">
+            {{ patient.sex|default:""}}
+        </div>
+        <div class="m-1">
+            {{ patient.profession|default:""}}
+        </div>
+        <div class="m-1">
+            num:<br/>
+            {% for tel in Phone %}
+            <span>
+                {{ tel.number}}<br/>
+            </span>
+            {% endfor %}
+        </div>
+        <div class="m-1">
+            {{ patient.family_stats|default:""}}
+        </div>
+        <div class="m-1">
+            {{ patient.hospital_service|default:""}}
+        </div>
+        <div class="m-1">
+            {{ patient.adresse|default:""}}
+        </div>
+        <div class="m-1">
+            {{ patient.age|default:""}}
+        </div>
+        {% url 'accounts:add_dossier' as adddoss_url %} 
+        <form method="POST">
+          {% csrf_token %}
+          <button class="btn btn-primary " href="{{adddoss_url}}" type="submit" name="run_script" role="button" style="width: 50%;">cree un nouveau dossier</button>
+        </form>
+    </div>
+        </div>
+        <div class="col-sm-8 flex-wrap">
+            <h3>Liste des dossier</h3>
+            <div class="form-group pull-right">
+                <input type="text" class="search form-control" placeholder="What you looking for?">
+            </div>
+            <span class="counter pull-right"></span>
+            <table
+              id="dtBasicExample"
+              class="table table-hover table-bordered results flags-table"
+            >
+              <caption>
+                List of Patients
+              </caption>
+              <thead>
+                <tr>
+                  <th class="th-sm" scope="col">#</th>
+                  <th class="th-sm" scope="col">#patient</th>
+                  <th class="th-sm" scope="col">tools</th>
+                </tr>
+                <tr class="warning no-result">
+                    <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+                </tr>
+              </thead>
+              <div
+                data-bs-spy="scroll"
+                data-bs-target="#navbar-example2"
+                data-bs-offset="0"
+                class="scrollspy-example"
+                tabindex="0"
+              >
+                <tbody>
+                  {% for doss in dossier %}
+                  <tr data-id="{{doss.id}}" data-name="{{ doss.patient_id}}">
+                    <td>{{doss.id}}</td>
+                    <td>{{ doss.patientid.id}}</td>
+                    <td><button type="button" class="btn btn-danger"><span class="oi oi-trash" ></span></button></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </div>
+            </table>
+        </div>
+        <script>
+          $(document).ready(function() {
+          $(".search").keyup(function () {
+            var searchTerm = $(".search").val();
+            var listItem = $('.results tbody').children('tr');
+            var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+            
+          $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+                return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+            }
+          });
+            
+          $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+            $(this).attr('visible','false');
+          });
+        
+          $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+            $(this).attr('visible','true');
+          });
+        
+          var jobCount = $('.results tbody tr[visible="true"]').length;
+            $('.counter').text(jobCount + ' item');
+        
+          if(jobCount == '0') {$('.no-result').show();}
+            else {$('.no-result').hide();}
+                  });
+        });
+        (function(document, window, $) {
+          $('.flags-table tbody tr').on('click', function() {
+            var id = $(this).data('id');
+            var name = $(this).data('name');
+              $.ajax({
+                            url: "",
+                            type: 'POST',
+                            async: true,
+                            data: {'text': id,csrfmiddlewaretoken: '{{ csrf_token }}'},
+                            success: function () {
+                            window.location.href = 'dossier';}
+                });
+          });
+        })(document, window, jQuery);
+        </script>
+      </div>
+</div>
+
+{% endblock %}

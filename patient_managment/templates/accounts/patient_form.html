@@ -1,839 +1,1360 @@
 {% extends 'base.html' %}
-{% block title %}Home{% endblock %} 
+{% block title %}Home{% endblock %}
 {% load static %}
 
 {%block content %}
-<form class="row g-3 needs-validation justify-content-center p-5" novalidate>
-    <!--I.	Antécédents cardio-vasculaires-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>I.	Antécédents cardio-vasculaires</h3> 
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Etes-vous suivi pour une hypertension artérielle ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Etes-vous suivi pour une insuffisance cardiaque ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Etes-vous suivi pour un souffle au cœur ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Avez-vous une valve cardiaque artificielle ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_5">
-        <label class="form-check-label" for="flexSwitchCheckDefault">5.	Avez-vous un pace-maker (pile) ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_6" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">6.	Avez-vous des stents coronaires ? (Ressorts dans les artères du cœur) </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_7" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">7.	Avez-vous fait une phlébite (veine bouchée au niveau des jambes) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_8" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">8.	Avez-vous fait une embolie pulmonaire (artère bouchée au niveau des poumons) ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_9">
-        <label class="form-label" for="flexSwitchCheckDefault">9.	Avez-vous déjà eu des examens à visée cardiaque ?</label>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">10. Avez-vous consulté ou été hospitalisé pour une cause cardiaque ? (Préciser) </label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="card_10" name="card_10" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="card_10_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">11. Quelle est la date de la dernière consultation auprès du cardiologue ?</label>
-      <div class="input-group col-mb-3">
-        <div class="input-group-text ">
-          <input class="form-check-input" type="checkbox" id="card_11" name="card_11" >
-        </div>
-        <input type="date" value="2017-08-08" class="form-control" aria-label="Text input with checkbox" id="card_11_in" disabled>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_12" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">12.	Est-ce que vous présentez une douleur thoracique lors de l’exercice d’un effort ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_13">
-        <label class="form-check-label" for="flexSwitchCheckDefault">13.	Etes-vous essoufflé(e) à l’exercice d’un effort ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_14" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">14.	Sentez-vous des palpitations sans cause évidente ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_15" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">15.	Présentez-vous parfois un vertige ou perte de conscience ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_16" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">16.	Avez-vous fait des varices ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_17">
-        <label class="form-check-label" for="flexSwitchCheckDefault">17.	Avez-vous des crampes dans les mollets vous stoppant à la marche ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_18" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">18.	Est-ce que vous rencontrez une difficulté à monter deux étages sans repos ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_19" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">19.	Prenez soin de vous (par exemple manger, vous habiller, vous laver, aller aux toilettes) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_20" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">20.	Marchez-vous à l'intérieur (par exemple vous déplacer autour de votre maison) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_21">
-        <label class="form-check-label" for="flexSwitchCheckDefault">21.	Marchez-vous 1 à 2 blocs de maisons sur un sol plat (par exemple sur environ 200m sur chemin plat) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_22" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">22.	Est-ce que vous pouvez monter un escalier ou une colline (par exemple un étage d'escalier) ?  </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_23" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">23.	Est-ce que vous pouvez courir sur une courte distance ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_24" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">24.	Est-ce que vous pouvez faire des travaux légers à la maison (par exemple nettoyer la poussière, laver les vaisselles) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_25">
-        <label class="form-check-label" for="flexSwitchCheckDefault">25.	Est-ce que vous pouvez faire des travaux modérés à la maison (par exemple, passer l'aspirateur, balayer le sol, porter les courses) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_26" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">26.	Est-ce que vous pouvez faire de gros travaux à la maison (par exemple, soulever ou déplacer des meubles lourds) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_27" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">27.	Est-ce que vous pouvez faire du jardinage (par exemple ratisser les feuilles, désherber, pousser la tondeuse de gazon) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_28" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">28.	Est-ce que vous pouvez avoir des relations sexuelles ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_29">
-        <label class="form-check-label" for="flexSwitchCheckDefault">29.	Est-ce que vous pouvez participer à des activités récréatives modérées (par exemple, danse, footing, bicyclette, faire les courses au marché) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_30" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">30.	Est-ce que vous pouvez participer à des sports intenses (par exemple, natation, football, courir) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_31" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">31.	Est-ce que votre activité usuelle entraîne soit fatigue, dyspnée, douleurs angineuses ou palpitations ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_32" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">32.	Est-ce que vous êtes confortable au repos, mais l'activité physique habituelle entraine fatigue, palpitations ou dyspnée ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_33" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">33.	Est-ce que vous présentez une dyspnée, palpitations ou fatigue au repos et en cas d'effort la gêne augmente ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_34" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">34.	Est-ce que vous avez une difficulté respiratoire en position couchée, améliorée en position assise ou debout ?</label>
-      </div>
-      <script>
-        document.getElementById('card_10').onchange = function() {
-          document.getElementById('card_10_in').disabled = !this.checked;
-        };
-        document.getElementById('card_11').onchange = function() {
-          document.getElementById('card_11_in').disabled = !this.checked;
-        };
-      </script>
+<form class="row g-3 needs-validation justify-content-center p-5" method="POST" novalidate>
+  {% csrf_token %}
+  <!--I.	Antécédents cardio-vasculaires-->
+  <div class="col-md-6 tab" style="display: none;">
+    {% csrf_token %}
+
+    <h3>I. Antécédents cardio-vasculaires</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Etes-vous suivi pour une hypertension artérielle
+        ?</label>
     </div>
-    <!--II.	Antécédents pulmonaires-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>II.	Antécédents pulmonaires</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Etes-vous suivi pour asthme ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Etes-vous suivi pour la tuberculose ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Etes-vous suivi pour une bronchite chronique ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="polm_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Toussez-vous ou crachez-vous au moins trois mois par an ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_5">
-        <label class="form-check-label" for="flexSwitchCheckDefault">5.	Etes-vous essoufflé(e) au repos ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_6" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">6.	Est-ce que vous ronflez la nuit ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_7" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">7.	Quelqu'un a-t-il observé que vous vous arrêtiez de respirer pendant votre sommeil ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_8" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">8.	Sentez-vous souvent fatigué, épuisé ou somnolent pendant la journée ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_9">
-        <label class="form-check-label" for="flexSwitchCheckChecked">9.	Est-ce que vous avez présenté une infection respiratoire dans le mois précédent ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_10" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">10.	Est-ce que vous n’avez aucune gêne liée au souffle, sauf pour des exercices physiques intenses ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="polm_11" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">11.	Est-ce que vous êtes gêné par l'essoufflement à la marche rapide ou en gravissant une légère colline.</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_12">
-        <label class="form-check-label" for="flexSwitchCheckDefault">12.	Sur terrain plat, est-ce que vous marchez plus lentement que les personnes du même âge en raison de l'essoufflement, ou vous devez s'arrêter pour respirer en marchant à son propre rythme ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_13" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">13.	Est-ce que vous arrêtez pour respirer après 100 mètres ou quelques minutes de marche sur terrain plat ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_14" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">14.	Est-ce que vous sentez trop essoufflé pour quitter la maison, ou essoufflement en s'habillant ou se déshabillant ?</label>
-      </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Etes-vous suivi pour une insuffisance cardiaque ?
+      </label>
     </div>
-    <!--III.	Antécédents rénaux-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>III.	Antécédents rénaux</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="renau_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Etes-vous suivi pour insuffisance rénale ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renau_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Avez-vous des problèmes pour uriner ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="renau_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Avez-vous souffert d'une lithiase rénale (calculs, coliques néphrétiques) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="renau_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Avez-vous eu des infections urinaires ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="renau_5">
-        <label class="form-check-label" for="flexSwitchCheckDefault">5.	Avez-vous des problèmes de prostate (pour les hommes) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renau_6" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">6.	Etes-vous suivi pour des kystes rénaux ?</label>
-      </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Etes-vous suivi pour un souffle au cœur ?</label>
     </div>
-    <!--IV.	Antécédents neurologiques et psychiatriques-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>IV.	Antécédents neurologiques et psychiatriques</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="neuro_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Avez-vous été traité pour une épilepsie (ou convulsions) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="neuro_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Avez-vous eu un coma ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="neuro_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Avez-vous été traité pour une migraine ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="neuro_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Avez-vous été traité pour un accident vasculaire cérébrale ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="neuro_5">
-        <label class="form-check-label" for="flexSwitchCheckDefault">5.	Etes-vous suivi pour des troubles psychiatriques ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="neuro_6" >
-        <label class="form-check-label" for="flexSwitchCheckChecked">6.	Avez-vous présenté une paralysie quelconque ?</label>
-      </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Avez-vous une valve cardiaque artificielle
+        ? </label>
     </div>
-    <!--V.	Antécédents hormonaux et métaboliques-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>V.	Antécédents hormonaux et métaboliques</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="horm_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Etes-vous diabétique ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="horm_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Etes-vous traité par de l’insuline (injections) ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="horm_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Etes-vous suivi pour maladie de la thyroïde ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="horm_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Etes-vous suivi pour un trouble du bilan lipidique (cholestérol, triglycéride…) ?</label>
-      </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_5">
+      <label class="form-check-label" for="flexSwitchCheckDefault">5. Avez-vous un pace-maker (pile) ? </label>
     </div>
-    <!--VI.	Antécédents digestifs-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>VI.	Antécédents digestifs</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="digest_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Avez-vous été traité(e) pour un ulcère (de l’estomac ou du duodénum) ?</label>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_6">
+      <label class="form-check-label" for="flexSwitchCheckChecked">6. Avez-vous des stents coronaires ? (Ressorts dans
+        les artères du cœur) </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_7">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">7. Avez-vous fait une phlébite (veine bouchée au
+        niveau des jambes) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_8">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">8. Avez-vous fait une embolie pulmonaire
+        (artère bouchée au niveau des poumons) ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_9">
+      <label class="form-label" for="flexSwitchCheckDefault">9. Avez-vous déjà eu des examens à visée cardiaque
+        ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">10. Avez-vous consulté ou été hospitalisé pour une
+      cause cardiaque ? (Préciser) </label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="card_10" name="card_10">
       </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="digest_2">
-        <label class="form-check-label" for="flexSwitchCheckChecked">2.	Avez-vous des brûlures ou des douleurs de l'estomac ?</label>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="card_10_in"
+      name="card_10_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">11. Quelle est la date de la dernière consultation
+      auprès du cardiologue ?</label>
+    <div class="input-group col-mb-3">
+      <div class="input-group-text ">
+        <input class="form-check-input" type="checkbox" id="card_11" name="card_11">
       </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="digest_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Avez-vous eu des vomissements ou des diarrhées récemment ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="digest_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Avez-vous été traité(e) pour un reflux gastro œsophagien ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="digest_5" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">5.	Avez-vous des régurgitations acides, qui donnent un goût amer dans la bouche ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="digest_6">
-        <label class="form-check-label" for="flexSwitchCheckChecked">6.	Avez-vous une sensation de brûlure partant du creux de l'estomac et remontant vers la bouche ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="digest_7" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">7.	Avez-vous une cirrhose ?</label>
-      </div>
-      <div class="input-group mb-3">
-        <input class="form-check-input" type="checkbox" id="digest_3" name="digest_3" >
-        <label class="form-check-label ml-3" for="flexSwitchCheckChecked" style="
+      <input type="date" value="2017-08-08" class="form-control" aria-label="Text input with checkbox" id="card_11_in"
+      name="card_11_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_12">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">12. Est-ce que vous présentez une douleur
+        thoracique lors de l’exercice d’un effort ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_13">
+      <label class="form-check-label" for="flexSwitchCheckDefault">13. Etes-vous essoufflé(e) à l’exercice d’un effort ?
+      </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_14">
+      <label class="form-check-label" for="flexSwitchCheckChecked">14. Sentez-vous des palpitations sans cause évidente
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_15">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">15. Présentez-vous parfois un vertige ou perte de
+        conscience ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_16">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">16. Avez-vous fait des varices ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_17">
+      <label class="form-check-label" for="flexSwitchCheckDefault">17. Avez-vous des crampes dans les mollets vous
+        stoppant à la marche ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_18">
+      <label class="form-check-label" for="flexSwitchCheckChecked">18. Est-ce que vous rencontrez une difficulté à
+        monter deux étages sans repos ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_19">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">19. Prenez soin de vous (par exemple manger, vous
+        habiller, vous laver, aller aux toilettes) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_20">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">20. Marchez-vous à l'intérieur (par exemple
+        vous déplacer autour de votre maison) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_21">
+      <label class="form-check-label" for="flexSwitchCheckDefault">21. Marchez-vous 1 à 2 blocs de maisons sur un sol
+        plat (par exemple sur environ 200m sur chemin plat) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_22">
+      <label class="form-check-label" for="flexSwitchCheckChecked">22. Est-ce que vous pouvez monter un escalier ou une
+        colline (par exemple un étage d'escalier) ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_23">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">23. Est-ce que vous pouvez courir sur une courte
+        distance ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_24">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">24. Est-ce que vous pouvez faire des travaux
+        légers à la maison (par exemple nettoyer la poussière, laver les vaisselles) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_25">
+      <label class="form-check-label" for="flexSwitchCheckDefault">25. Est-ce que vous pouvez faire des travaux modérés
+        à la maison (par exemple, passer l'aspirateur, balayer le sol, porter les courses) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_26">
+      <label class="form-check-label" for="flexSwitchCheckChecked">26. Est-ce que vous pouvez faire de gros travaux à la
+        maison (par exemple, soulever ou déplacer des meubles lourds) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_27">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">27. Est-ce que vous pouvez faire du jardinage (par
+        exemple ratisser les feuilles, désherber, pousser la tondeuse de gazon) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_28">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">28. Est-ce que vous pouvez avoir des
+        relations sexuelles ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="card_29">
+      <label class="form-check-label" for="flexSwitchCheckDefault">29. Est-ce que vous pouvez participer à des activités
+        récréatives modérées (par exemple, danse, footing, bicyclette, faire les courses au marché) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="card_30">
+      <label class="form-check-label" for="flexSwitchCheckChecked">30. Est-ce que vous pouvez participer à des sports
+        intenses (par exemple, natation, football, courir) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_31">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">31. Est-ce que votre activité usuelle entraîne soit
+        fatigue, dyspnée, douleurs angineuses ou palpitations ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_32">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">32. Est-ce que vous êtes confortable au
+        repos, mais l'activité physique habituelle entraine fatigue, palpitations ou dyspnée ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="card_33">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">33. Est-ce que vous présentez une dyspnée,
+        palpitations ou fatigue au repos et en cas d'effort la gêne augmente ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="card_34">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">34. Est-ce que vous avez une difficulté
+        respiratoire en position couchée, améliorée en position assise ou debout ?</label>
+    </div>
+    <script>
+      document.getElementById('card_10').onchange = function () {
+        document.getElementById('card_10_in').disabled = !this.checked;
+      };
+      document.getElementById('card_11').onchange = function () {
+        document.getElementById('card_11_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+  <!--II.	Antécédents pulmonaires-->
+  <div class="col-md-6 tab" style="display: none;">
+    {% csrf_token %}
+
+    <h3>II. Antécédents pulmonaires</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Etes-vous suivi pour asthme ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Etes-vous suivi pour la tuberculose ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Etes-vous suivi pour une bronchite chronique
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="polm_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Toussez-vous ou crachez-vous au moins
+        trois mois par an ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_5">
+      <label class="form-check-label" for="flexSwitchCheckDefault">5. Etes-vous essoufflé(e) au repos ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_6">
+      <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce que vous ronflez la nuit ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_7">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">7. Quelqu'un a-t-il observé que vous vous arrêtiez
+        de respirer pendant votre sommeil ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_8">
+      <label class="form-check-label" for="flexSwitchCheckDefault">8. Sentez-vous souvent fatigué, épuisé ou somnolent
+        pendant la journée ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_9">
+      <label class="form-check-label" for="flexSwitchCheckChecked">9. Est-ce que vous avez présenté une infection
+        respiratoire dans le mois précédent ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_10">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">10. Est-ce que vous n’avez aucune gêne liée au
+        souffle, sauf pour des exercices physiques intenses ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="polm_11">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">11. Est-ce que vous êtes gêné par
+        l'essoufflement à la marche rapide ou en gravissant une légère colline.</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="polm_12">
+      <label class="form-check-label" for="flexSwitchCheckDefault">12. Sur terrain plat, est-ce que vous marchez plus
+        lentement que les personnes du même âge en raison de l'essoufflement, ou vous devez s'arrêter pour respirer en
+        marchant à son propre rythme ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="polm_13">
+      <label class="form-check-label" for="flexSwitchCheckChecked">13. Est-ce que vous arrêtez pour respirer après 100
+        mètres ou quelques minutes de marche sur terrain plat ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="polm_14">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">14. Est-ce que vous sentez trop essoufflé pour
+        quitter la maison, ou essoufflement en s'habillant ou se déshabillant ?</label>
+    </div>
+  </div>
+  <!--III.	Antécédents rénaux-->
+  <div class="col-md-6 tab" style="display: none;">  
+    {% csrf_token %}
+    <h3>III. Antécédents rénaux</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="renau_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Etes-vous suivi pour insuffisance rénale ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renau_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Avez-vous des problèmes pour uriner ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="renau_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Avez-vous souffert d'une lithiase rénale
+        (calculs, coliques néphrétiques) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="renau_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Avez-vous eu des infections urinaires
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="renau_5">
+      <label class="form-check-label" for="flexSwitchCheckDefault">5. Avez-vous des problèmes de prostate (pour les
+        hommes) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="renau_6">
+      <label class="form-check-label" for="flexSwitchCheckChecked">6. Etes-vous suivi pour des kystes rénaux ?</label>
+    </div>
+  </div>
+  <!--IV.	Antécédents neurologiques et psychiatriques-->
+  <div class="col-md-6 tab" style="display: none;">
+    {% csrf_token %}
+    <h3>IV. Antécédents neurologiques et psychiatriques</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="neuro_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Avez-vous été traité pour une épilepsie (ou
+        convulsions) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="neuro_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Avez-vous eu un coma ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="neuro_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Avez-vous été traité pour une migraine ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="neuro_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Avez-vous été traité pour un accident
+        vasculaire cérébrale ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="neuro_5">
+      <label class="form-check-label" for="flexSwitchCheckDefault">5. Etes-vous suivi pour des troubles psychiatriques
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="neuro_6">
+      <label class="form-check-label" for="flexSwitchCheckChecked">6. Avez-vous présenté une paralysie quelconque
+        ?</label>
+    </div>
+  </div>
+  <!--V.	Antécédents hormonaux et métaboliques-->
+  <div class="col-md-6 tab" style="display: none;">
+    {% csrf_token %}
+    <h3>V. Antécédents hormonaux et métaboliques</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="horm_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Etes-vous diabétique ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="horm_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Etes-vous traité par de l’insuline (injections)
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="horm_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Etes-vous suivi pour maladie de la thyroïde
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="horm_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Etes-vous suivi pour un trouble du bilan
+        lipidique (cholestérol, triglycéride…) ?</label>
+    </div>
+  </div>
+  <!--VI.	Antécédents digestifs-->
+  <div class="col-md-6 tab" style="display: none;">
+    {% csrf_token %}
+
+    <h3>VI. Antécédents digestifs</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="digest_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Avez-vous été traité(e) pour un ulcère (de
+        l’estomac ou du duodénum) ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="digest_2">
+      <label class="form-check-label" for="flexSwitchCheckChecked">2. Avez-vous des brûlures ou des douleurs de
+        l'estomac ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="digest_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Avez-vous eu des vomissements ou des diarrhées
+        récemment ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="digest_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Avez-vous été traité(e) pour un reflux
+        gastro œsophagien ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="digest_5">
+      <label class="form-check-label" for="flexSwitchCheckDefault">5. Avez-vous des régurgitations acides, qui donnent
+        un goût amer dans la bouche ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="digest_6">
+      <label class="form-check-label" for="flexSwitchCheckChecked">6. Avez-vous une sensation de brûlure partant du
+        creux de l'estomac et remontant vers la bouche ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="digest_7">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">7. Avez-vous une cirrhose ?</label>
+    </div>
+    <div class="input-group mb-3">
+      <input class="form-check-input" type="checkbox" id="digest_3" name="digest_3">
+      <label class="form-check-label ml-3" for="flexSwitchCheckChecked" style="
         margin-left: 21px;"">8.	Avez-vous eu une hépatite virale ? (Ou jaunisse) ?</label>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in1" value="option1" disabled>
-            <label class="form-check-label" for="inlineRadio1">A</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in2" value="option2" disabled>
-            <label class="form-check-label" for="inlineRadio2">B</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in3" value="option3" disabled>
-            <label class="form-check-label" for="inlineRadio3">C</label>
-          </div>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="horm_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">9.	Avez-vous été traité pour cette hépatite ?</label>
-      </div>
-      <script>
-        document.getElementById('digest_3').onchange = function() {
-          document.getElementById('digest_in1').disabled = !this.checked;
-          document.getElementById('digest_in2').disabled = !this.checked;
-          document.getElementById('digest_in3').disabled = !this.checked;
-        };
-      </script>
+          <div class=" form-check form-check-inline">
+        <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in1" value="option1" disabled>
+        <label class="form-check-label" for="inlineRadio1">A</label>
     </div>
-    <!--VII.	Antécédents allergiques-->
-    <div class="col-md-8 tab" style="display: none;">
-      <h3>VII.	Antécédents allergiques</h3>
-      <label class="form-check-label" for="flexSwitchCheckChecked">1.	Etes-vous allergique à un produit d’anesthésie ? (Préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_1" name="allerg_1" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_1_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">2.	Etes-vous allergique à un antibiotique ? (Par exemple pénicilline…) ? (Préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_2" name="allerg_2" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_2_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">3.	Est-ce que vous présentez une allergie pour un autre médicament ? (Préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_3" name="allerg_3" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_3_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">4.	Etes-vous allergique à un produit de contraste de radiologie ?</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_4" name="allerg_4" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_4_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">5.	Etes-vous allergique pour autre substance (par exemple un aliment, latex, Sparadraps, …) ? (préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_5" name="allerg_5" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_5_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">6.	Avez-vous eu des réactions cutanées de type URTICAIRE ou ECZEMA ?</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="allerg_6" name="allerg_6" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_6_in" disabled>
-      </div>
-      <script>
-        document.getElementById('allerg_6').onchange = function() {
-          document.getElementById('allerg_6_in').disabled = !this.checked;
-        };
-        document.getElementById('allerg_1').onchange = function() {
-          document.getElementById('allerg_1_in').disabled = !this.checked;
-        };
-        document.getElementById('allerg_2').onchange = function() {
-          document.getElementById('allerg_2_in').disabled = !this.checked;
-        };
-        document.getElementById('allerg_4').onchange = function() {
-          document.getElementById('allerg_4_in').disabled = !this.checked;
-        };
-        document.getElementById('allerg_3').onchange = function() {
-          document.getElementById('allerg_3_in').disabled = !this.checked;
-        };
-        document.getElementById('allerg_5').onchange = function() {
-          document.getElementById('allerg_5_in').disabled = !this.checked;
-        };
-      </script>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in2" value="option2" disabled>
+      <label class="form-check-label" for="inlineRadio2">B</label>
     </div>
-    <!--VIII.	Antécédents hématologiques-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>VIII.	Antécédents hématologiques</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="hemato_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1.	Etes-vous suivi pour une anémie ? </label>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">2.	Saignez-vous facilement du nez ou des gencives ou ailleurs (par exemple en vous brossant les dents) ? (Préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="hemato_2" name="hemato_2" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_2_in" disabled>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="hemato_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Est-ce que vous présentez un saignement prolongé ou inhabituel lors d’une plaie ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="hemato_4" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Est-ce que vous présentez des ecchymoses(bleus) fréquentes sans cause évidente ?</label>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">5.	Est-ce que vous avez reçu une transfusion de sang avant (lors d’une chirurgie ou autre cause) ? (Préciser la cause)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="hemato_5" name="hemato_5" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">6.	Est-ce que vous avez rencontré une hémorragie inhabituelle lors d’une opération (ou lors d’une extraction dentaire…) ? (Préciser l’opération)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="hemato_6" name="hemato_6" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_6_in" disabled>
-      </div>
-      <script>
-        document.getElementById('hemato_2').onchange = function() {
-          document.getElementById('hemato_2_in').disabled = !this.checked;
-        };
-        document.getElementById('hemato_5').onchange = function() {
-          document.getElementById('hemato_5_in').disabled = !this.checked;
-        };
-        document.getElementById('hemato_6').onchange = function() {
-          document.getElementById('hemato_6_in').disabled = !this.checked;}
-      </script>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in3" value="option3" disabled>
+      <label class="form-check-label" for="inlineRadio3">C</label>
     </div>
-    <!--IX.	Antécédents rhumatologique-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>IX.	Antécédents rhumatologiques</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_1" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">1. Avez-vous une scoliose (malformation du dos) ?</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="horm_4">
+    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">9. Avez-vous été traité pour cette hépatite
+      ?</label>
+  </div>
+  <script>
+    document.getElementById('digest_3').onchange = function () {
+      document.getElementById('digest_in1').disabled = !this.checked;
+      document.getElementById('digest_in2').disabled = !this.checked;
+      document.getElementById('digest_in3').disabled = !this.checked;
+    };
+  </script>
+  </div>
+  <!--VII.	Antécédents allergiques-->
+  <div class="col-md-8 tab" style="display: none;">
+    {% csrf_token %}
+
+    <h3>VII. Antécédents allergiques</h3>
+    <label class="form-check-label" for="flexSwitchCheckChecked">1. Etes-vous allergique à un produit d’anesthésie ?
+      (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_1" name="allerg_1">
       </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_2" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">2.	Avez-vous une crise de sciatique, sciatalgies, des douleurs lombaires ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_3" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">3.	Avez-vous des Fractures ou tassements de vertèbres ?</label>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">4.	Avez-vous autres problèmes au niveau de la colonne vertébrale (préciser)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="rhumatol_4" name="rhumatol_4" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="rhumatol_4_in" disabled>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="rhumatol_5" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5.	Etes-vous atteint d'arthrose cervicale (du cou) ?</label>
-      </div>
-      <script>
-        document.getElementById('rhumatol_4').onchange = function() {
-          document.getElementById('rhumatol_4_in').disabled = !this.checked;
-        };
-      </script>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_1_in"
+        disabled>
     </div>
-    <!--X.	Habitudes-->
-    <div class="col-md-6 tab col" style="display: none;">
-      <h3>X.	Habitudes</h3>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" name="habit_1" id="habit_1" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">1.	Est-ce que vous fumez (ou chicha ou neffa) ? </label>
+    <label class="form-check-label" for="flexSwitchCheckChecked">2. Etes-vous allergique à un antibiotique ? (Par
+      exemple pénicilline…) ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_2" name="allerg_2">
       </div>
-      <div class="form-check row">
-            <label class="form-check-label" for="exampleCheck1" >Nombre de cigarette par jour :</label>
-            <input type="number" class="form-control" id="habit_1_in" value="00" disabled>
-      </div>
-      <div class="form-check row">
-            <label class="form-check-label" for="exampleCheck1">Nombre de chicha par jour :</label>
-            <input type="number" class="form-control" id="habit_11_in" value="00" disabled>
-      </div>
-      <div class="form-check row">
-            <label class="form-check-label" for="exampleCheck1">Nombre d’année de tabagisme :</label>
-            <input type="number" class="form-control" id="habit_111_in" value="00" disabled>
-      </div>
-      <div class="form-check form-switch row">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="habit_2" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">2.	Est-ce que vous buvez de l’alcool ?</label>
-      </div>
-      <div class="form-check form-switch row">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="habit_3" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">3.	Consommez-vous du Cannabis ou autre substance ?</label>
-      </div>
-      <script>
-        document.getElementById('habit_1').onchange = function() {
-          document.getElementById('habit_1_in').disabled = !this.checked;
-          document.getElementById('habit_11_in').disabled = !this.checked;
-          document.getElementById('habit_111_in').disabled = !this.checked;
-        };
-      </script>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_2_in"
+        disabled>
     </div>
-    <!--XI.	Antécédents familiaux-->
-    <div class="col-md-6 tab" style="display: none;">
-      <h3>XI.	Antécédents familiaux</h3>
-      <label class="form-check-label" for="flexSwitchCheckChecked">1.	Est-ce que vous avez quelqu’un dans la famille qui présente un trouble de la coagulation ? (Préciser le lien avec vous)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="famil_1" name="famil_1" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_1_in" disabled>
+    <label class="form-check-label" for="flexSwitchCheckChecked">3. Est-ce que vous présentez une allergie pour un autre
+      médicament ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_3" name="allerg_3">
       </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="famil_2" >
-        <label class="form-check-label" for="flexSwitchCheckDefault">2.	Est-ce que vous avez quelqu’un dans la famille qui a fait une phlébite ou une embolie pulmonaire ? </label>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">3.	Est-ce que vous avez quelqu’un dans la famille qui présente une maladie musculaire héréditaire ? (Préciser le lien avec vous)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="famil_3" name="famil_3" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_3_in" disabled>
-      </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">4.	Est-ce que vous avez quelqu’un dans la famille qui a rencontré un incident en rapport avec l’anesthésie ? (Préciser) </label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="famil_4" name="famil_4" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_4_in" disabled>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_5" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5.	Est-ce que vous avez quelqu’un dans la famille qui a décédé à un âge précoce ? </label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_6" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">6.	Est-ce que vous avez quelqu’un dans la famille qui a une atrophie musculaire ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_7" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">7.	Est-ce que vous avez quelqu’un dans la famille qui a un trouble de la marche ?</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_8" >
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">8.	Est-ce que vous avez quelqu’un dans la famille qui a une petite taille (nanisme) ?</label>
-      </div>
-      <script>
-        document.getElementById('famil_4').onchange = function() {
-          document.getElementById('famil_4_in').disabled = !this.checked;
-        };
-        document.getElementById('famil_1').onchange = function() {
-          document.getElementById('famil_1_in').disabled = !this.checked;
-        };
-        document.getElementById('famil_3').onchange = function() {
-          document.getElementById('famil_3_in').disabled = !this.checked;
-        };
-      </script>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_3_in"
+        disabled>
     </div>
-    <!--XII.	Antécédents chirurgicaux et anesthésiques-->
-    <div class="col-md-6 tab" style="display: none;background-color: #FFF;">
-      <h3>XII.	Antécédents chirurgicaux et anesthésiques</h3>
-      <label class="form-check-label" for="flexSwitchCheckChecked">Est-ce que vous avez effectué des opérations avant (y compris césarienne) ? (Préciser l’opération, la date et le type de l’anesthésie) </label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="churgi_0" name="churgi_0" >
-        </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">4. Etes-vous allergique à un produit de contraste de
+      radiologie ?</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_4" name="allerg_4">
       </div>
-      
-      <div class="input-group mb-3" >
-        <input type="text" class="form-control" aria-label="nature de l'operation" id="nature" disabled>
-        <input type="date" class="form-control" aria-label="date del'operation" id="date" disabled>
-        <select class="custom-select" id="type" disabled>
-          <option selected>Type de l’anesthésie </option>
-          <option value="1">Générale</option>
-          <option value="2">Locorégionale axiale(Rachianesthésie, péridurale)</option>
-          <option value="3">Locorégionale périphérique</option>
-        </select>
-        <div class="input-group-append" >
-          <button class="btn btn-outline-secondary" id="button" type="button" onclick="add_row();" disabled>ajouter</button>
-        </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_4_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">5. Etes-vous allergique pour autre substance (par
+      exemple un aliment, latex, Sparadraps, …) ? (préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_5" name="allerg_5">
       </div>
-      <table class="table justify-content-center" id="table" style="width: auto;">
-        <thead class="thead-dark">
-          <col>
-          <colgroup span="3"></colgroup>
-          <tr>
-            <th rowspan="2">Nature de l'operation</th>
-            <th rowspan="2">Date de l'operation</th>
-            <th colspan="2" scope="colgroup">Type de l’anesthésie </th>
-          </tr>
-          <tr>
-            <th scope="col">Produced</th>
-            <th scope="col">Sold</th>
-            <th scope="col">Produced</th>
-          </tr>
-        </thead>
-      </table>
-      <label class="form-check-label" for="flexSwitchCheckChecked">5.	Est-ce que vous avez reçu une transfusion de sang avant (lors d’une chirurgie ou autre cause) ? (Préciser la cause)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="hemato_5" name="hemato_5" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in" disabled>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_5_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">6. Avez-vous eu des réactions cutanées de type
+      URTICAIRE ou ECZEMA ?</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="allerg_6" name="allerg_6">
       </div>
-      <label class="form-check-label" for="flexSwitchCheckChecked">5.	Est-ce que vous avez reçu une transfusion de sang avant (lors d’une chirurgie ou autre cause) ? (Préciser la cause)</label>
-      <div class="input-group mb-3">
-        <div class="input-group-text">
-          <input class="form-check-input" type="checkbox" id="hemato_5" name="hemato_5" >
-        </div>
-        <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in" disabled>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_6_in"
+        disabled>
+    </div>
+    <script>
+      document.getElementById('allerg_6').onchange = function () {
+        document.getElementById('allerg_6_in').disabled = !this.checked;
+      };
+      document.getElementById('allerg_1').onchange = function () {
+        document.getElementById('allerg_1_in').disabled = !this.checked;
+      };
+      document.getElementById('allerg_2').onchange = function () {
+        document.getElementById('allerg_2_in').disabled = !this.checked;
+      };
+      document.getElementById('allerg_4').onchange = function () {
+        document.getElementById('allerg_4_in').disabled = !this.checked;
+      };
+      document.getElementById('allerg_3').onchange = function () {
+        document.getElementById('allerg_3_in').disabled = !this.checked;
+      };
+      document.getElementById('allerg_5').onchange = function () {
+        document.getElementById('allerg_5_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+  <!--VIII.	Antécédents hématologiques-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>VIII. Antécédents hématologiques</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="hemato_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Etes-vous suivi pour une anémie ? </label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">2. Saignez-vous facilement du nez ou des gencives ou
+      ailleurs (par exemple en vous brossant les dents) ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="hemato_2" name="hemato_2">
       </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="hemato_3" >
-        <label class="form-check-label" for="flexSwitchCheckDisabled">3.	Est-ce que vous présentez un saignement prolongé ou inhabituel lors d’une plaie ?</label>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_2_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="hemato_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Est-ce que vous présentez un saignement prolongé
+        ou inhabituel lors d’une plaie ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="hemato_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. Est-ce que vous présentez des
+        ecchymoses(bleus) fréquentes sans cause évidente ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">5. Est-ce que vous avez reçu une transfusion de sang
+      avant (lors d’une chirurgie ou autre cause) ? (Préciser la cause)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="hemato_5" name="hemato_5">
       </div>
-      <script>
-        function add_row(){
-          var nature = document.getElementById('nature').value;
-          console.log(nature);
-          var date = document.getElementById('date').value;
-          console.log(date);
-          var type = document.getElementById('type').value;
-          console.log(type);
-          var table = document.getElementById('table');
-          var tr = document.createElement('tr');
-          var td1 = document.createElement('td');
-          var td1in = document.createElement('input');
-          var td2 = document.createElement('td');
-          var td2in = document.createElement('input');
-          var op1 = document.createElement('td');
-          var op1in = document.createElement('input');
-          var op2 = document.createElement('td');
-          var op2in = document.createElement('input');
-          var op3 = document.createElement('td');
-          var op3in = document.createElement('input');
-          td1in.value = nature ;
-          td1.appendChild(td1in);
-          td2in.value = date ;
-          td2.appendChild(td2in);
-          if(type == 1){
-            op1in.value = type;
-            op1.appendChild(op1in);
-          }
-          if(type == 2){
-            op2in.value = type;
-            op2.appendChild(op2in);
-          }
-          if(type == 3){
-            op3in.value = type;
-            op3.appendChild(op3in);
-          }
-          tr.appendChild(td1);
-          tr.appendChild(td2);
-          tr.appendChild(op1);
-          tr.appendChild(op2);
-          tr.appendChild(op3);
-          table.appendChild(tr);
-          
-        }
-        document.getElementById('churgi_0').onchange = function() {
-          document.getElementById('nature').disabled = !this.checked;
-          document.getElementById('date').disabled = !this.checked;
-          document.getElementById('type').disabled = !this.checked;
-          document.getElementById('button').disabled = !this.checked;
-        };
-      </script>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce que vous avez rencontré une hémorragie
+      inhabituelle lors d’une opération (ou lors d’une extraction dentaire…) ? (Préciser l’opération)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="hemato_6" name="hemato_6">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_6_in"
+        disabled>
+    </div>
+    <script>
+      document.getElementById('hemato_2').onchange = function () {
+        document.getElementById('hemato_2_in').disabled = !this.checked;
+      };
+      document.getElementById('hemato_5').onchange = function () {
+        document.getElementById('hemato_5_in').disabled = !this.checked;
+      };
+      document.getElementById('hemato_6').onchange = function () {
+        document.getElementById('hemato_6_in').disabled = !this.checked;
+      }
+    </script>
+  </div>
+  <!--IX.	Antécédents rhumatologique-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>IX. Antécédents rhumatologiques</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Avez-vous une scoliose (malformation du dos)
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_2">
+      <label class="form-check-label" for="flexSwitchCheckDefault">2. Avez-vous une crise de sciatique, sciatalgies, des
+        douleurs lombaires ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="rhumatol_3">
+      <label class="form-check-label" for="flexSwitchCheckDefault">3. Avez-vous des Fractures ou tassements de vertèbres
+        ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">4. Avez-vous autres problèmes au niveau de la colonne
+      vertébrale (préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="rhumatol_4" name="rhumatol_4">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="rhumatol_4_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="rhumatol_5">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Etes-vous atteint d'arthrose cervicale (du
+        cou) ?</label>
+    </div>
+    <script>
+      document.getElementById('rhumatol_4').onchange = function () {
+        document.getElementById('rhumatol_4_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+  <!--X.	Habitudes-->
+  <div class="col-md-6 tab col" style="display: none;">
+    <h3>X. Habitudes</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="habit_1" id="habit_1">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">1. Est-ce que vous fumez (ou chicha ou neffa)
+        ? </label>
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">Nombre de cigarette par jour :</label>
+      <input type="number" class="form-control" id="habit_1_in" value="00" disabled>
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">Nombre de chicha par jour :</label>
+      <input type="number" class="form-control" id="habit_11_in" value="00" disabled>
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">Nombre d’année de tabagisme :</label>
+      <input type="number" class="form-control" id="habit_111_in" value="00" disabled>
+    </div>
+    <div class="form-check form-switch row">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="habit_2">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">2. Est-ce que vous buvez de l’alcool
+        ?</label>
+    </div>
+    <div class="form-check form-switch row">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="habit_3">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">3. Consommez-vous du Cannabis ou autre
+        substance ?</label>
+    </div>
+    <script>
+      document.getElementById('habit_1').onchange = function () {
+        document.getElementById('habit_1_in').disabled = !this.checked;
+        document.getElementById('habit_11_in').disabled = !this.checked;
+        document.getElementById('habit_111_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+  <!--XI.	Antécédents familiaux-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>XI. Antécédents familiaux</h3>
+    <label class="form-check-label" for="flexSwitchCheckChecked">1. Est-ce que vous avez quelqu’un dans la famille qui
+      présente un trouble de la coagulation ? (Préciser le lien avec vous)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="famil_1" name="famil_1">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_1_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="famil_2">
+      <label class="form-check-label" for="flexSwitchCheckDefault">2. Est-ce que vous avez quelqu’un dans la famille qui
+        a fait une phlébite ou une embolie pulmonaire ? </label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">3. Est-ce que vous avez quelqu’un dans la famille qui
+      présente une maladie musculaire héréditaire ? (Préciser le lien avec vous)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="famil_3" name="famil_3">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_3_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">4. Est-ce que vous avez quelqu’un dans la famille qui a
+      rencontré un incident en rapport avec l’anesthésie ? (Préciser) </label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="famil_4" name="famil_4">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_4_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_5">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
+        famille qui a décédé à un âge précoce ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_6">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">6. Est-ce que vous avez quelqu’un dans la
+        famille qui a une atrophie musculaire ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_7">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">7. Est-ce que vous avez quelqu’un dans la
+        famille qui a un trouble de la marche ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="famil_8">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">8. Est-ce que vous avez quelqu’un dans la
+        famille qui a une petite taille (nanisme) ?</label>
+    </div>
+    <script>
+      document.getElementById('famil_4').onchange = function () {
+        document.getElementById('famil_4_in').disabled = !this.checked;
+      };
+      document.getElementById('famil_1').onchange = function () {
+        document.getElementById('famil_1_in').disabled = !this.checked;
+      };
+      document.getElementById('famil_3').onchange = function () {
+        document.getElementById('famil_3_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+  <!--XII.	Antécédents chirurgicaux et anesthésiques-->
+  <div class="col-md-6 tab" style="display: none;background-color: #FFF;">
+    <h3>XII. Antécédents chirurgicaux et anesthésiques</h3>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Est-ce que vous avez effectué des opérations avant (y
+      compris césarienne) ? (Préciser l’opération, la date et le type de l’anesthésie) </label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="churgi_0" name="churgi_0">
+      </div>
     </div>
 
-    <div class="col-md-4 tab" style="display: none;">
-      <label for="validationCustomUsername" class="form-label">Username</label>
-      <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" aria-label="nature de l'operation" id="nature" value="operation" disabled>
+      <input type="date" class="form-control" aria-label="date del'operation" id="date" value="2011-05-05" disabled>
+      <select class="custom-select" id="type" disabled>
+        <option selected>Type de l’anesthésie </option>
+        <option value="1">Générale</option>
+        <option value="2">Locorégionale axiale(Rachianesthésie, péridurale)</option>
+        <option value="3">Locorégionale périphérique</option>
+      </select>
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" id="button" type="button" onclick="add_row();"
+          disabled>ajouter</button>
       </div>
     </div>
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <button class="page-link"  id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-        </li>
-        <li class="page-item step"><span class="page-link" >1</span></li>
-        <li class="page-item step"><span class="page-link" >2</span></li>
-        <li class="page-item step"><span class="page-link" >3</span></li>
-        <li class="page-item step"><span class="page-link" >4</span></li>
-        <li class="page-item step"><span class="page-link" >5</span></li>
-        <li class="page-item step"><span class="page-link" >6</span></li>
-        <li class="page-item step"><span class="page-link" >7</span></li>
-        <li class="page-item step"><span class="page-link" >8</span></li>
-        <li class="page-item step"><span class="page-link" >9</span></li>
-        <li class="page-item step"><span class="page-link" >10</span></li>
-        <li class="page-item step"><span class="page-link" >11</span></li>
-        <li class="page-item step"><span class="page-link" >12</span></li>
-        <li class="page-item">
-            <button class="page-link" id="nextBtn" onclick="nextPrev(1)"">Next</button>
+    <table class="table justify-content-center" id="table" style="width: auto;">
+      <thead class="thead-dark">
+        <col>
+        <colgroup span="3"></colgroup>
+        <tr>
+          <th rowspan="2">Nature de l'operation</th>
+          <th rowspan="2">Date de l'operation</th>
+          <th colspan="3" scope="colgroup">Type de l’anesthésie </th>
+        </tr>
+        <tr>
+          <th scope="col">Produced</th>
+          <th scope="col">Sold</th>
+          <th scope="col">Produced</th>
+        </tr>
+      </thead>
+    </table>
+    <label class="form-check-label" for="flexSwitchCheckChecked">1. Est-ce que vous aviez un recours à une anesthésie
+      pour une autre raison (endoscopie, accouchement) ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="churgi_1" name="churgi_1">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_1_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">2. Est-ce que vous avez rencontré des complications
+      chirurgicales ou anesthésiques ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="churgi_2" name="churgi_2">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_2_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="churgi_3">
+      <label class="form-check-label" for="flexSwitchCheckDisabled">3. Est-ce que vous avez présenté des nausées et des
+        vomissements après une opération (dans les 24 heures suivant l’opération) ou vous avez un mal de transport
+        ?</label>
+    </div>
+    <script>
+      function add_row() {
+        var nature = document.getElementById('nature').value;
+        console.log(nature);
+        var date = document.getElementById('date').value;
+        console.log(date);
+        var type = document.getElementById('type').value;
+        console.log(type);
+        var table = document.getElementById('table');
+        var tr = document.createElement('tr');
+        var td1 = document.createElement('td');
+        var td1in = document.createElement('input');
+        var td2 = document.createElement('td');
+        var td2in = document.createElement('input');
+        var op1 = document.createElement('td');
+        var op1in = document.createElement('input');
+        var op2 = document.createElement('td');
+        var op2in = document.createElement('input');
+        var op3 = document.createElement('td');
+        var op3in = document.createElement('input');
+        td1in.value = nature;
+        td1.appendChild(td1in);
+        td2in.value = date;
+        td2.appendChild(td2in);
+        if (type == 1) {
+          op1in.value = type;
+          op1.appendChild(op1in);
+        }
+        if (type == 2) {
+          op2in.value = type;
+          op2.appendChild(op2in);
+        }
+        if (type == 3) {
+          op3in.value = type;
+          op3.appendChild(op3in);
+        }
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(op1);
+        tr.appendChild(op2);
+        tr.appendChild(op3);
+        table.appendChild(tr);
+
+      }
+      document.getElementById('churgi_0').onchange = function () {
+        document.getElementById('nature').disabled = !this.checked;
+        document.getElementById('date').disabled = !this.checked;
+        document.getElementById('type').disabled = !this.checked;
+        document.getElementById('button').disabled = !this.checked;
+      };
+      document.getElementById('churgi_1').onchange = function () {
+        document.getElementById('churgi_1_in').disabled = !this.checked;
+      };
+      document.getElementById('churgi_2').onchange = function () {
+        document.getElementById('churgi_2_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+
+  <!--XIII.	Etat bucco-dentaire-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>XIII. Etat bucco-dentaire</h3>
+    <label class="form-check-label" for="flexSwitchCheckChecked">1. Est-ce que vous avez quelqu’un dans la famille qui
+      présente un trouble de la coagulation ? (Préciser le lien avec vous)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="dent_1" name="dent_1">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dent_1_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="dent_2">
+      <label class="form-check-label" for="flexSwitchCheckDefault">2. Est-ce que vous avez quelqu’un dans la famille qui
+        a fait une phlébite ou une embolie pulmonaire ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_3">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
+        famille qui a décédé à un âge précoce ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
+        famille qui a décédé à un âge précoce ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_5">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
+        famille qui a décédé à un âge précoce ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_6">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">6. Est-ce que vous avez quelqu’un dans la
+        famille qui a une atrophie musculaire ?</label>
+    </div>
+    <script>
+      console.log('hello');
+      document.getElementById('dent_1').onchange = function () {
+        document.getElementById('dent_1_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+
+  <!--XIV.	Divers-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>XIV.	Divers</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="dive_1">
+      <label class="form-check-label" for="flexSwitchCheckDefault">1. Portez-vous des lentilles de contacts ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_2">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">2. Portez-vous des bijoux ou piercings
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_3">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">3. Avez-vous été traité pour un glaucome
+        ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">4. Etes-vous suivi pour une autre maladie non citée
+      au-dessus ? (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="dive_4" name="dive_4">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_4_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">5. Est-ce que vous étiez hospitalisé avant (à part pour
+      être opérer) ? (Préciser la cause)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="dive_5" name="dive_5">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_5_in"
+        disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce que vous étiez hospitalisé en réanimation ?
+      (Préciser la cause)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="dive_6" name="dive_6">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_6_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_7">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">7. Est-ce que vous étiez intubé avant
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_8">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">8. Est-ce que vous avez une intubation
+        difficile ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_9">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">9. Est-ce que vous étiez trachéotomisé avant
+        ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_10">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">10. Est-ce que vous avez un traumatisme ou
+        une brulure cervico-faciale ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dive_11">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">11. Est-ce que vous avez une malformation
+        cervico-faciale ?</label>
+    </div>
+    <script>
+      console.log('hello');
+      document.getElementById('dive_4').onchange = function () {
+        document.getElementById('dive_4_in').disabled = !this.checked;
+      };
+      document.getElementById('dive_5').onchange = function () {
+        document.getElementById('dive_5_in').disabled = !this.checked;
+      };
+      document.getElementById('dive_6').onchange = function () {
+        document.getElementById('dive_6_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+
+  <!--XV.	Antécédents gynéco-obstétriques-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>XV. Antécédents gynéco-obstétriques</h3>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_1">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">1. Est-ce que vous êtes enceinte (ou vous
+        pouvez l’être) ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckDefault">2. Date des derniers règles :</label>
+    <div class="form-check form-switch">
+      <input class="form-control" type="date" id="flexSwitchCheckDefault" name="gyneco_4">
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">3. Est-ce que vous utilisez un moyen de contraception ?
+      (Lequel)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="gyneco_3" name="gyneco_3">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_3_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="gyneco_4">
+      <label class="form-check-label" for="flexSwitchCheckDefault">4. Est-ce que vous êtes allaitante ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="habit_5" id="habit_5">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Avez-vous consulté un médecin ou reçu un
+        traitement pour des règles trop abondantes (pilule contraceptive, fer, autre traitement...) ?</label>
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">6. Nombre de grossesse : </label>
+      <input type="number" class="form-control" id="habit_1_in" value="00">
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">7. Nombre d’accouchement : </label>
+      <input type="number" class="form-control" id="habit_11_in" value="00">
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">8. Nombre d’enfant vivant : </label>
+      <input type="number" class="form-control" id="habit_111_in" value="00">
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_9">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">9. Vos accouchements se sont-ils bien passés
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_10">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">10. Avez-vous saigné après un accouchement
+        (hémorragie du post-partum) ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">11. Avez-vous des problèmes lors de vos accouchement ?
+      (Préciser)</label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="gyneco_11" name="gyneco_11">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_11_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_12">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">12. Avez-vous eu une ou des césariennes ? (Si
+        oui les joindre au tableau des antécédents chirurgicaux page 4)</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_13">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">13. Avez-vous eu une anesthésie générale lors
+        d'un accouchement ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_14">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">14. Avez-vous déjà eu une anesthésie
+        péridurale lors d'un accouchement ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_15">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">15. Lors de vos grossesses précédentes
+        avez-vous présenté une hypertension artérielle ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_16">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">16. Lors de vos grossesses précédentes
+        avez-vous présenté un diabète gestationnel ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_17">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">17. Lors de vos grossesses précédentes
+        avez-vous présenté une protéinurie ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_18">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">18. Lors de vos grossesses précédentes
+        avez-vous présenté des œdèmes ?</label>
+    </div>
+    <div class="input-group-text">
+      <input class="form-check-input" type="checkbox" id="gyneco_19" name="gyneco_19">
+      <label class="form-check-label" for="flexSwitchCheckChecked">19. Si vous êtes enceinte</label>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="a" name="a" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">a. Est-ce que vous avez bien suivi votre
+        grossesse ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">b. Quel-est votre poids avant la grossesse
+      ?</label>
+    <div class="form-check form-switch pl-3">
+      <input class="form-control" type="number" value="00" id="b" name="b" disabled>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="c" name="c" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">c. Avez-vous réalisé les sérologies
+        nécessaires (toxoplasmose, rubéole, syphilis) ?</label>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="d" name="d" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">d. Avez-vous présenté une hypertension
+        artérielle ?</label>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="e" name="e" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">e. Avez-vous présenté un diabète gestationnel
+        ?</label>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="f" name="f" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">f. Avez-vous présenté une protéinurie
+        ?</label>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="g" name="g" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">g. Avez-vous présenté des œdèmes ?</label>
+    </div>
+    <label class="form-check-label pl-3" for="flexSwitchCheckChecked">h. Avez-vous présenté un autre problème ?
+      (Préciser)</label>
+    <div class="input-group mb-3 pl-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="h" name="h" disabled>
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="h_in" disabled>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">i. Quand vous avez fait la dernière échographie
+      ? (Apporter le compte rendu avec vous le jour de la consultation)</label>
+    <div class="form-check form-switch pl-3">
+      <input class="form-control" value="2015-05-05" type="date" id="i" name="i" disabled>
+    </div>
+    <div class="form-check form-switch pl-3">
+      <input class="form-check-input" type="checkbox" id="j" name="j" disabled>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">j. Est-ce que vous avez une grossesse
+        gémellaire ?</label>
+    </div>
+
+    <script>
+      console.log('hello');
+      document.getElementById('gyneco_3').onchange = function () {
+        document.getElementById('gyneco_3_in').disabled = !this.checked;
+      };
+      document.getElementById('gyneco_11').onchange = function () {
+        document.getElementById('gyneco_11_in').disabled = !this.checked;
+      };
+      document.getElementById('h').onchange = function () {
+        document.getElementById('h_in').disabled = !this.checked;
+      };
+      document.getElementById('gyneco_19').onchange = function () {
+        document.getElementById('a').disabled = !this.checked;
+        document.getElementById('b').disabled = !this.checked;
+        document.getElementById('c').disabled = !this.checked;
+        document.getElementById('d').disabled = !this.checked;
+        document.getElementById('e').disabled = !this.checked;
+        document.getElementById('f').disabled = !this.checked;
+        document.getElementById('g').disabled = !this.checked;
+        document.getElementById('h').disabled = !this.checked;
+        document.getElementById('i').disabled = !this.checked;
+        document.getElementById('j').disabled = !this.checked;
+      };
+    </script>
+  </div>
+
+  <!--XVI.	Antécédents pédiatriques-->
+  <div class="col-md-6 tab" style="display: none;">
+    <h3>XVI. Antécédents pédiatriques</h3>
+    <label class="form-check-label" for="group">1. Né par : </label>
+    <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group" id="group" name="pediatri_1">
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio1">voie basse </label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2">césarienne </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_2">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">2. Est-ce qu’il est prématuré ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_3">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">3. Est-ce que les parents sont apparentés
+        ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_4">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4. A-t-on décelé une quelconque malformation
+        à la naissance ? </label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_5">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce qu’il a eu des problèmes à la
+        naissance ?</label>
+    </div>
+    <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce qu’il était hospitalisé après la naissance ?
+      (Préciser la cause) </label>
+    <div class="input-group mb-3">
+      <div class="input-group-text">
+        <input class="form-check-input" type="checkbox" id="pediatri_6" name="pediatri_6">
+      </div>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="pediatri_6_in"
+        disabled>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="pediatri_7" id="pediatri_7">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">7. Est-ce que le développement psychomoteur
+        est normale ?</label>
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">8. A quel âge ton enfant a acquis la position assise ?</label>
+      <input type="number" class="form-control" id="pediatri_8_in" value="00" >
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">9. A quel âge ton enfant a acquis la marche ? </label>
+      <input type="number" class="form-control" id="pediatri_9_in" value="00" >
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">10. A quel âge ton enfant a commencé de parler ? </label>
+      <input type="number" class="form-control" id="pediatri_10_in" value="00" >
+    </div>
+    <div class="form-check row">
+      <label class="form-check-label" for="exampleCheck1">11. A quel âge ton enfant a appris à tenir sa tête tout seul ?
+      </label>
+      <input type="number" class="form-control" id="pediatri_11_in" value="00" >
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_12">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">12.	Présente-t-il une maladie des nerfs et/ou des muscles ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_13">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">13.	Est-ce qu’il a reçu tous les vaccins nécessaires ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_14">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">14.	Est-ce qu’il a présenté des convulsions fébriles durant l’enfance ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_15">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">15.	Est-ce que votre bébé présente des efforts pour téter ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_16">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">16.	Est-ce que votre bébé n’arrive pas à terminer la tétée ?</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_17">
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">17.	Est-ce que votre bébé présente des régurgitations après la tétée ?</label>
+    </div>
+    
+    <script>
+      console.log('hello');
+      document.getElementById('pediatri_6').onchange = function () {
+        document.getElementById('pediatri_6_in').disabled = !this.checked;
+      };
+    </script>
+  </div>
+
+  <!--XVII.	Traitement en cours-->
+  <div class="col-md-10 flex tab" style="display: none;">
+    <h3>XVII.	Traitement en cours</h3>
+    <label class="form-check-label" for="flexSwitchCheckChecked">Est-ce que vous avez effectué des opérations avant (y
+      compris césarienne) ? (Préciser l’opération, la date et le type de l’anesthésie) </label>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Médicament (Veuillez écrire en lettres MAJUSCULES)	Dose	Nombre de comprimés" id="meds" >
+      <input type="number" class="form-control" placeholder="Dose" id="dose" value="00" >
+      <input type="number" class="form-control" placeholder="Matin" id="matin" value="00" >
+      <input type="number" class="form-control" placeholder="Midi" id="midi" value="00" >
+      <input type="number" class="form-control" placeholder="Soir" id="soir" value="00" >
+      <input type="number" class="form-control" placeholder="Nuit" id="nuit" value="00" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" id="button" type="button" onclick="add_row1();"
+          >ajouter</button>
+      </div>
+    </div>
+    <table class="table table-responsive" id="table1" style="width: 100%;">
+      <thead class="thead-dark">
+        <col>
+        <colgroup span="4"></colgroup>
+        <tr>
+          <th rowspan="2">Médicament (Veuillez écrire en lettres MAJUSCULES)</th>
+          <th rowspan="2">Dose</th>
+          <th colspan="4" scope="colgroup">Nombre de comprimés</th>
+        </tr>
+        <tr>
+          <th scope="col" style="width: max-content;">Matin</th>
+          <th scope="col" style="width: max-content;">Midi</th>
+          <th scope="col" style="width: max-content;">Soir</th>
+          <th scope="col" style="width: max-content;">Nuit</th>
+        </tr>
+      </thead>
+    </table>
+    <script>
+      function add_row1() {
+        var meds = document.getElementById('meds').value;
+        var dose = document.getElementById('dose').value;
+        var matin = document.getElementById('matin').value;
+        var midi = document.getElementById('midi').value;
+        var soir = document.getElementById('soir').value;
+        var nuit = document.getElementById('nuit').value;
+        var table = document.getElementById('table1');
+        var trr = document.createElement('tr');
+        var td11 = document.createElement('td');
+        var td11in = document.createElement('input');
+        var td22 = document.createElement('td');
+        var td22in = document.createElement('input');
+        var op11 = document.createElement('td');
+        var op11in = document.createElement('input');
+        var op22 = document.createElement('td');
+        var op22in = document.createElement('input');
+        var op33 = document.createElement('td');
+        var op33in = document.createElement('input');
+        var op44 = document.createElement('td');
+        var op44in = document.createElement('input');
+        console.log('1111111111111111111');
+        td11in.value = meds;
+        td11in.style.width = "100%" ;
+        td11.appendChild(td11in);
+        td22in.value = dose;
+        td22in.style.width = "50px" ;
+        td22.appendChild(td22in);
+        op11in.value = matin;
+        op11in.style.width = "50px" ;
+        op11.appendChild(op11in);
+        op22in.value = midi;
+        op22in.style.width = "50px" ;
+        op22.appendChild(op22in);
+        op33in.value = soir;
+        op33in.style.width = "50px" ;
+        op33.appendChild(op33in);
+        op44in.value = nuit;
+        op44in.style.width = "50px" ;
+        op44.appendChild(op44in);
+        trr.appendChild(td11);
+        trr.appendChild(td22);
+        trr.appendChild(op11);
+        trr.appendChild(op22);
+        trr.appendChild(op33);
+        trr.appendChild(op44);
+        table.appendChild(trr);
+
+      }
+    </script>
+  </div>
+
+  <div class="col-md-4 tab" style="display: none;">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+        required>
+    </div>
+  </div>
+  
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <button class="page-link" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      </li>
+      <li class="page-item step"><span class="page-link">1</span></li>
+      <li class="page-item step"><span class="page-link">2</span></li>
+      <li class="page-item step"><span class="page-link">3</span></li>
+      <li class="page-item step"><span class="page-link">4</span></li>
+      <li class="page-item step"><span class="page-link">5</span></li>
+      <li class="page-item step"><span class="page-link">6</span></li>
+      <li class="page-item step"><span class="page-link">7</span></li>
+      <li class="page-item step"><span class="page-link">8</span></li>
+      <li class="page-item step"><span class="page-link">9</span></li>
+      <li class="page-item step"><span class="page-link">10</span></li>
+      <li class="page-item step"><span class="page-link">11</span></li>
+      <li class="page-item step"><span class="page-link">12</span></li>
+      <li class="page-item step"><span class="page-link">13</span></li>
+      <li class="page-item step"><span class="page-link">14</span></li>
+      <li class="page-item step"><span class="page-link">15</span></li>
+      <li class="page-item step"><span class="page-link">16</span></li>
+      <li class="page-item step"><span class="page-link">17</span></li>
+      <li class="page-item">
+        <button class="page-link" id="nextBtn" onclick="nextPrev(1)">Next</button>
           </li>
         </ul>
       </nav>
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-        'use strict'
-
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-                }
-
-                form.classList.add('was-validated')
-            }, false)
-            })
-        })()
-        var currentTab = 11; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the current tab
-
-        function showTab(n) {
-          // This function will display the specified tab of the form ...
-          var x = document.getElementsByClassName("tab");
-          x[n].style.display = "block";
-          // ... and fix the Previous/Next buttons:
-          if (n == 0) {
-            document.getElementById("prevBtn").style.display = "none";
-          } else {
-            document.getElementById("prevBtn").style.display = "inline";
-          }
-          if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
-          } else {
-            document.getElementById("nextBtn").innerHTML = "Next";
-          }
-          // ... and run a function that displays the correct step indicator:
-          fixStepIndicator(n)
-        }
-
-        function nextPrev(n) {
-          // This function will figure out which tab to display
-          var x = document.getElementsByClassName("tab");
-          console.log("I'm here");
-          // Exit the function if any field in the current tab is invalid:
-          if (n == 1 && !validateForm()) return false;
-          // Hide the current tab:
-          x[currentTab].style.display = "none";
-          // Increase or decrease the current tab by 1:
-          currentTab = currentTab + n;
-          console.log(currentTab);
-          // if you have reached the end of the form... :
-          if (currentTab >= x.length) {
-            //...the form gets submitted:
-            document.getElementById("regForm").submit();
-            return false;
-          }
-          // Otherwise, display the correct tab:
-          showTab(currentTab);
-        }
-
-        function validateForm() {
-          // This function deals with validation of the form fields
-          var x, y, i, valid = true;
-          x = document.getElementsByClassName("tab");
-          y = x[currentTab].getElementsByTagName("input");
-          // A loop that checks every input field in the current tab:
-          for (i = 0; i < y.length; i++) {
-            // If a field is empty...
-            if (y[i].value == "") {
-              // add an "invalid" class to the field:
-              y[i].className += " invalid";
-              // and set the current valid status to false:
-              valid = false;
-            }
-          }
-          // If the valid status is true, mark the step as finished and valid:
-          if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
-          }
-          return valid; // return the valid status
-        }
-
-        function fixStepIndicator(n) {
-          // This function removes the "active" class of all steps...
-          var i, x = document.getElementsByClassName("step");
-          for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
-          }
-          //... and adds the "active" class to the current step:
-          x[n].className += " active";
-        }
-        
-        
-        
-        
-        
-
-        
+    <script src=" {% static 'js/form_paggination.js' %}">
     </script>
-  </form>
-    {% endblock %}
+</form>
+{% endblock %}
