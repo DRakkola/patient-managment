@@ -15,20 +15,12 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-left: 10px;">
                 <div class="navbar-nav">
                         {% url 'public:index' as index_url %}      
-                        {% if request.path == index_url %}Home{% else %}<a class="nav-item nav-link" href="{{index_url}}">Home</a>{% endif %}
+                        {% if request.path == index_url %}Accueil{% else %}<a class="nav-item nav-link" href="{{index_url}}">Accueil</a>{% endif %}
                         {% url 'accounts:patients' as patients_url %}
                         {% if request.path == patients_url %}Patients{% else %}<a class="nav-item nav-link" href="{{patients_url}}">Patients</a>{% endif %}
                         {% url 'public:dashboard' as dash_url %}
                         {% if request.path == dash_url %}Tableau de bord{% else %}<a class="nav-item nav-link" href="{{dash_url}}">Tableau de bord</a>{% endif %}
-                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                        </li>
+                        
                 </div>
         </div>
 </nav>

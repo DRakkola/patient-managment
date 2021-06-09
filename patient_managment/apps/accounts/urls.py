@@ -19,5 +19,6 @@ urlpatterns = [
     path("patients",views.patients, name="patients"),
     path("patient_profile", views.patient_profile, name="patient_profile"),
     path("dossier",views.dossier,name="dossier"),
-     path("patient_form",views.patient_form,name="patient_form")
+    path("patient_form",views.patient_form,name="patient_form"),
+    path("patient_media",views.media,name="patient_media")
 ]

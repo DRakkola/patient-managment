@@ -1,23 +1,24 @@
 {% extends 'base.html' %} {% block title %}Home{% endblock %} {% load static %}
 {%block content %}
 <div class="form-group pull-right">
-    <input type="text" class="search form-control" placeholder="What you looking for?">
+    <input type="text" class="search form-control" placeholder="Rechercher">
 </div>
 <span class="counter pull-right"></span>
 <table
   id="dtBasicExample"
   class="table table-hover table-bordered results flags-table"
+  style="background-color: #FFF;"
 >
   <caption>
-    List of Patients
+    Liste des patients
   </caption>
   <thead>
     <tr>
       <th class="th-sm" scope="col">#</th>
-      <th class="th-sm" scope="col">name</th>
-      <th class="th-sm" scope="col">grade</th>
-      <th class="th-sm" scope="col">sexe</th>
-      <th class="th-sm" scope="col">age</th>
+      <th class="th-sm" scope="col">Nom & Prenom</th>
+      <th class="th-sm" scope="col">Grade</th>
+      <th class="th-sm" scope="col">Genre</th>
+      <th class="th-sm" scope="col">Date de naissance</th>
     </tr>
     <tr class="warning no-result">
         <td colspan="4"><i class="fa fa-warning"></i> No result</td>

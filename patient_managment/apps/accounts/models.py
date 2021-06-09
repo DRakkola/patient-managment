@@ -15,7 +15,10 @@ class AccountsUsergroups(models.Model):
     class Meta:
         managed = False
         db_table = 'accounts_usergroups'
-
+        verbose_name = 'Group'
+        verbose_name_plural = 'Groups'
+    def __str__(self):
+        return self.name
 
 class AccountsUserprofile(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -27,7 +30,10 @@ class AccountsUserprofile(models.Model):
     class Meta:
         managed = False
         db_table = 'accounts_userprofile'
-
+        verbose_name = 'Profile'
+        verbose_name_plural = 'Profiles'
+    def __str__(self):
+        return self.id
 
 class AccountsUserprofileRights(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -38,7 +44,10 @@ class AccountsUserprofileRights(models.Model):
         managed = False
         db_table = 'accounts_userprofile_Rights'
         unique_together = (('userprofile', 'userrights'),)
-
+        verbose_name = 'Rights'
+        verbose_name_plural = 'Rights'
+    def __str__(self):
+        return self.userrights
 
 class AccountsUserrights(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -48,15 +57,16 @@ class AccountsUserrights(models.Model):
     class Meta:
         managed = False
         db_table = 'accounts_userrights'
-
+    def __str__(self):
+        return self.name
 
 class Allergiques(models.Model):
     allerg_1 = models.CharField(max_length=255, blank=True, null=True)
     allerg_2 = models.CharField(max_length=255, blank=True, null=True)
     allerg_3 = models.CharField(max_length=255, blank=True, null=True)
-    allerg_4 = models.BooleanField(blank=True, null=True)
+    allerg_4 = models.CharField(max_length=255, blank=True, null=True)
     allerg_5 = models.CharField(max_length=255, blank=True, null=True)
-    allerg_6 = models.BooleanField(blank=True, null=True)
+    allerg_6 = models.CharField(max_length=255, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -108,7 +118,8 @@ class AuthUser(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_user'
-
+    def __str__(self):
+        return self.username
 
 class AuthUserGroups(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -185,7 +196,7 @@ class Chirurgicaux(models.Model):
 
 class Dentaire(models.Model):
     dent_1 = models.BooleanField(blank=True, null=True)
-    img_dentid = models.ForeignKey('ImgDent', models.DO_NOTHING, db_column='img_dentid')
+    #img_dentid = models.ForeignKey('ImgDent', models.DO_NOTHING, db_column='img_dentid')
     dent_2 = models.BooleanField(blank=True, null=True)
     dent_3 = models.BooleanField(blank=True, null=True)
     dent_4 = models.BooleanField(blank=True, null=True)
@@ -289,6 +300,9 @@ class Enceinte(models.Model):
     a = models.BooleanField(blank=True, null=True)
     b = models.IntegerField(blank=True, null=True)
     c = models.BooleanField(blank=True, null=True)
+    d = models.BooleanField(blank=True, null=True)
+    e = models.BooleanField(blank=True, null=True)
+    f = models.BooleanField(blank=True, null=True)
     g = models.BooleanField(blank=True, null=True)
     h = models.CharField(max_length=255, blank=True, null=True)
     i = models.DateField(blank=True, null=True)
@@ -381,7 +395,7 @@ class Gyneco(models.Model):
     gyne_16 = models.BooleanField(blank=True, null=True)
     gyne_17 = models.BooleanField(blank=True, null=True)
     gyne_18 = models.BooleanField(blank=True, null=True)
-    enceinteid = models.ForeignKey(Enceinte, models.DO_NOTHING, db_column='enceinteid')
+    enceinteid = models.ForeignKey(Enceinte, models.DO_NOTHING, db_column='enceinteid',null=True)
 
     class Meta:
         managed = False
@@ -389,7 +403,7 @@ class Gyneco(models.Model):
 
 
 class Habitudes(models.Model):
-    fumerid = models.ForeignKey(Fumer, models.DO_NOTHING, db_column='fumerid')
+    fumerid = models.ForeignKey(Fumer, models.DO_NOTHING, db_column='fumerid',null=True)
     habit_1 = models.BooleanField(blank=True, null=True)
     habit_2 = models.BooleanField(blank=True, null=True)
     habit_3 = models.BooleanField(blank=True, null=True)
@@ -467,6 +481,7 @@ class Patient(models.Model):
     family_stats = models.CharField(max_length=255, blank=True, null=True)
     hospital_service = models.CharField(max_length=255, blank=True, null=True)
     adresse = models.CharField(max_length=255, blank=True, null=True)
+    profile_pic = models.ImageField(null=True,blank=True)
 
     class Meta:
         managed = False
@@ -474,7 +489,7 @@ class Patient(models.Model):
 
 
 class Pediatriques(models.Model):
-    pediatri_1 = models.BooleanField(blank=True, null=True)
+    pediatri_1 = models.CharField(max_length=255, blank=True, null=True)
     pediatri_2 = models.BooleanField(blank=True, null=True)
     pediatri_3 = models.BooleanField(blank=True, null=True)
     pediatri_4 = models.BooleanField(blank=True, null=True)

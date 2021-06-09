@@ -25,9 +25,11 @@
             {{ patient.grade|default:"" }}
         </h2>
         <div class="m-2">
+            Genre :
             {{ patient.sex|default:""}}
         </div>
         <div class="m-1">
+            Profession :
             {{ patient.profession|default:""}}
         </div>
         <div class="m-1">
@@ -39,15 +41,19 @@
             {% endfor %}
         </div>
         <div class="m-1">
+            Situation familiale :
             {{ patient.family_stats|default:""}}
         </div>
         <div class="m-1">
+            Service hospitalier :
             {{ patient.hospital_service|default:""}}
         </div>
         <div class="m-1">
+          Adress :
             {{ patient.adresse|default:""}}
         </div>
         <div class="m-1">
+          Date de naissace :
             {{ patient.age|default:""}}
         </div>
         {% url 'accounts:add_dossier' as adddoss_url %} 
@@ -74,6 +80,7 @@
                 <tr>
                   <th class="th-sm" scope="col">#</th>
                   <th class="th-sm" scope="col">#patient</th>
+                  <th class="th-sm" scope="col">Etat du dossier</th>
                   <th class="th-sm" scope="col">tools</th>
                 </tr>
                 <tr class="warning no-result">
@@ -92,6 +99,7 @@
                   <tr data-id="{{doss.id}}" data-name="{{ doss.patient_id}}">
                     <td>{{doss.id}}</td>
                     <td>{{ doss.patientid.id}}</td>
+                    <td><span class="badge bg-warning text-dark">En cours</span></td>
                     <td><button type="button" class="btn btn-danger"><span class="oi oi-trash" ></span></button></td>
                   </tr>
                   {% endfor %}

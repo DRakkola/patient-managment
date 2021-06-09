@@ -42,11 +42,11 @@
         <ul class="navbar-nav" style="margin-right: 18px;margin-left: 400px;">
           <li class="nav-item ">
             {% if user.is_authenticated %} {% url 'accounts:profile' as profile_url %}
-            <span>hi {% if request.path == profile_url %} {{ user.username}}{% else%}
+            <span>@{% if request.path == profile_url %} {{ user.username}}{% else%}
               <a href="{{ profile_url }}">{{ user.username}}</a> {% endif %}</span>
-              <span><a href="{% url 'accounts:logout' %}">Logout</a></span>
+              <span><a href="{% url 'accounts:logout' %}">deconnecter</a></span>
               {% else %}
-              <span><a href="{% url 'accounts:login' %}">Login</a></span>
+              <span><a href="{% url 'accounts:login' %}">se connecter</a></span>
               {% endif %}
             </li>
           </ul>

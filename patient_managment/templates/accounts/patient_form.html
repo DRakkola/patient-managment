@@ -398,20 +398,20 @@
       <label class="form-check-label" for="flexSwitchCheckDisabled">7. Avez-vous une cirrhose ?</label>
     </div>
     <div class="input-group mb-3">
-      <input class="form-check-input" type="checkbox" id="digest_3" name="digest_3">
+      <input class="form-check-input" type="checkbox" id="digest_8" name="digest_8">
       <label class="form-check-label ml-3" for="flexSwitchCheckChecked" style="
         margin-left: 21px;"">8.	Avez-vous eu une hépatite virale ? (Ou jaunisse) ?</label>
-          <div class=" form-check form-check-inline">
-        <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in1" value="option1" disabled>
-        <label class="form-check-label" for="inlineRadio1">A</label>
+    </div>
+    <div class=" form-check form-check-inline">
+      <input class="form-check-input" name="hepatit" type="checkbox" id="digest_in1" value="A" disabled>
+      <label class="form-check-label" for="digest_in1">A</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" name="hepatit" type="checkbox" id="digest_in2" value="B" disabled>
+      <label class="form-check-label" for="digest_in2">B</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in2" value="option2" disabled>
-      <label class="form-check-label" for="inlineRadio2">B</label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" name="inlineRadioOptions" type="radio" id="digest_in3" value="option3" disabled>
-      <label class="form-check-label" for="inlineRadio3">C</label>
+      <input class="form-check-input" name="hepatit" type="checkbox" id="digest_in3" value="C" disabled>
+      <label class="form-check-label" for="digest_in3">C</label>
     </div>
   </div>
   <div class="form-check form-switch">
@@ -420,7 +420,7 @@
       ?</label>
   </div>
   <script>
-    document.getElementById('digest_3').onchange = function () {
+    document.getElementById('digest_8').onchange = function () {
       document.getElementById('digest_in1').disabled = !this.checked;
       document.getElementById('digest_in2').disabled = !this.checked;
       document.getElementById('digest_in3').disabled = !this.checked;
@@ -438,7 +438,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_1" name="allerg_1">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_1_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_1_in" name="allerg_1_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">2. Etes-vous allergique à un antibiotique ? (Par
@@ -447,7 +447,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_2" name="allerg_2">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_2_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_2_in" name="allerg_2_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">3. Est-ce que vous présentez une allergie pour un autre
@@ -456,7 +456,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_3" name="allerg_3">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_3_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_3_in" name="allerg_3_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">4. Etes-vous allergique à un produit de contraste de
@@ -465,7 +465,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_4" name="allerg_4">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_4_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_4_in" name="allerg_4_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">5. Etes-vous allergique pour autre substance (par
@@ -474,7 +474,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_5" name="allerg_5">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_5_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_5_in" name="allerg_5_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">6. Avez-vous eu des réactions cutanées de type
@@ -483,7 +483,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="allerg_6" name="allerg_6">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_6_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="allerg_6_in" name="allerg_6_in"
         disabled>
     </div>
     <script>
@@ -520,7 +520,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="hemato_2" name="hemato_2">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_2_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_2_in" name="hemato_2_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -539,7 +539,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="hemato_5" name="hemato_5">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_5_in" name="hemato_5_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce que vous avez rencontré une hémorragie
@@ -548,7 +548,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="hemato_6" name="hemato_6">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_6_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="hemato_6_in" name="hemato_6_in"
         disabled>
     </div>
     <script>
@@ -587,7 +587,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="rhumatol_4" name="rhumatol_4">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="rhumatol_4_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="rhumatol_4_in" name="rhumatol_4_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -611,15 +611,15 @@
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">Nombre de cigarette par jour :</label>
-      <input type="number" class="form-control" id="habit_1_in" value="00" disabled>
+      <input type="number" class="form-control" id="habit_1_in" value="00" name="cigarette" disabled>
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">Nombre de chicha par jour :</label>
-      <input type="number" class="form-control" id="habit_11_in" value="00" disabled>
+      <input type="number" class="form-control" id="habit_11_in" value="00" name="chicha" disabled>
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">Nombre d’année de tabagisme :</label>
-      <input type="number" class="form-control" id="habit_111_in" value="00" disabled>
+      <input type="number" class="form-control" id="habit_111_in" value="00" name="tabagisme" disabled>
     </div>
     <div class="form-check form-switch row">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="habit_2">
@@ -648,7 +648,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="famil_1" name="famil_1">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_1_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_1_in" name="famil_1_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -662,7 +662,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="famil_3" name="famil_3">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_3_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_3_in" name="famil_3_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">4. Est-ce que vous avez quelqu’un dans la famille qui a
@@ -671,7 +671,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="famil_4" name="famil_4">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_4_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="famil_4_in" name="famil_4_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -736,9 +736,9 @@
         <col>
         <colgroup span="3"></colgroup>
         <tr>
-          <th rowspan="2">Nature de l'operation</th>
-          <th rowspan="2">Date de l'operation</th>
-          <th colspan="3" scope="colgroup">Type de l’anesthésie </th>
+          <th rowspan="2" name="nature">Nature de l'operation</th>
+          <th rowspan="2" name="date">Date de l'operation</th>
+          <th colspan="3" scope="colgroup" name="type">Type de l’anesthésie </th>
         </tr>
         <tr>
           <th scope="col">Produced</th>
@@ -753,7 +753,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="churgi_1" name="churgi_1">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_1_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_1_in" name="churgi_1_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">2. Est-ce que vous avez rencontré des complications
@@ -762,7 +762,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="churgi_2" name="churgi_2">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_2_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="churgi_2_in" name="churgi_1_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -792,19 +792,24 @@
         var op3 = document.createElement('td');
         var op3in = document.createElement('input');
         td1in.value = nature;
+        td1in.name = 'nature';
         td1.appendChild(td1in);
         td2in.value = date;
+        td2in.name = 'date';
         td2.appendChild(td2in);
         if (type == 1) {
           op1in.value = type;
+          op1in.name = 'type';
           op1.appendChild(op1in);
         }
         if (type == 2) {
           op2in.value = type;
+          op2in.name = 'type';
           op2.appendChild(op2in);
         }
         if (type == 3) {
           op3in.value = type;
+          op2in.name = 'type';
           op3.appendChild(op3in);
         }
         tr.appendChild(td1);
@@ -833,8 +838,8 @@
   <!--XIII.	Etat bucco-dentaire-->
   <div class="col-md-6 tab" style="display: none;">
     <h3>XIII. Etat bucco-dentaire</h3>
-    <label class="form-check-label" for="flexSwitchCheckChecked">1. Est-ce que vous avez quelqu’un dans la famille qui
-      présente un trouble de la coagulation ? (Préciser le lien avec vous)</label>
+    <label class="form-check-label" for="flexSwitchCheckChecked">1.	Certaines de vos dents vous semblent-elles plus fragiles ?
+      Lesquelles ?</label>
     <div class="input-group mb-3">
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="dent_1" name="dent_1">
@@ -844,28 +849,23 @@
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="dent_2">
-      <label class="form-check-label" for="flexSwitchCheckDefault">2. Est-ce que vous avez quelqu’un dans la famille qui
-        a fait une phlébite ou une embolie pulmonaire ? </label>
+      <label class="form-check-label" for="flexSwitchCheckDefault">2.	Portez-vous une prothèse dentaire amovible ?</label>
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_3">
-      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
-        famille qui a décédé à un âge précoce ? </label>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">3.	Portez-vous une prothèse dentaire fixe ?</label>
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_4">
-      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
-        famille qui a décédé à un âge précoce ? </label>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">4.	Avez-vous des implants, bridges, ou pivots ?</label>
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_5">
-      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Est-ce que vous avez quelqu’un dans la
-        famille qui a décédé à un âge précoce ? </label>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5.	Avez-vous des dents mobiles ou déchaussées ?</label>
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="dent_6">
-      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">6. Est-ce que vous avez quelqu’un dans la
-        famille qui a une atrophie musculaire ?</label>
+      <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">6.	Avez-vous des troubles des articulations des mâchoires ? (Limitation d’ouverture, déviation du maxillaire inférieur, craquement à l’ouverture et à la fermeture, …).</label>
     </div>
     <script>
       console.log('hello');
@@ -898,7 +898,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="dive_4" name="dive_4">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_4_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_4_in" name="dive_4_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">5. Est-ce que vous étiez hospitalisé avant (à part pour
@@ -907,7 +907,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="dive_5" name="dive_5">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_5_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_5_in" name="dive_5_in"
         disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">6. Est-ce que vous étiez hospitalisé en réanimation ?
@@ -916,7 +916,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="dive_6" name="dive_6">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_6_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="dive_6_in" name="dive_6_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -968,7 +968,7 @@
     </div>
     <label class="form-check-label" for="flexSwitchCheckDefault">2. Date des derniers règles :</label>
     <div class="form-check form-switch">
-      <input class="form-control" type="date" id="flexSwitchCheckDefault" name="gyneco_4">
+      <input class="form-control" type="date" id="flexSwitchCheckDefault" name="gyneco_2">
     </div>
     <label class="form-check-label" for="flexSwitchCheckChecked">3. Est-ce que vous utilisez un moyen de contraception ?
       (Lequel)</label>
@@ -976,7 +976,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="gyneco_3" name="gyneco_3">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_3_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_3_in" name="gyneco_3_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -984,21 +984,21 @@
       <label class="form-check-label" for="flexSwitchCheckDefault">4. Est-ce que vous êtes allaitante ?</label>
     </div>
     <div class="form-check form-switch">
-      <input class="form-check-input" type="checkbox" name="habit_5" id="habit_5">
+      <input class="form-check-input" type="checkbox" name="gyneco_5" id="gyneco_5">
       <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">5. Avez-vous consulté un médecin ou reçu un
         traitement pour des règles trop abondantes (pilule contraceptive, fer, autre traitement...) ?</label>
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">6. Nombre de grossesse : </label>
-      <input type="number" class="form-control" id="habit_1_in" value="00">
+      <input type="number" class="form-control" id="gyneco_1_in" value="00" name="gyneco_6">
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">7. Nombre d’accouchement : </label>
-      <input type="number" class="form-control" id="habit_11_in" value="00">
+      <input type="number" class="form-control" id="gyneco_11_in" value="00" name="gyneco_7">
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">8. Nombre d’enfant vivant : </label>
-      <input type="number" class="form-control" id="habit_111_in" value="00">
+      <input type="number" class="form-control" id="gyneco_111_in" value="00" name="gyneco_8">
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="gyneco_9">
@@ -1016,7 +1016,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="gyneco_11" name="gyneco_11">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_11_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="gyneco_11_in" name="gyneco_11_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -1098,7 +1098,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="h" name="h" disabled>
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="h_in" disabled>
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="h_in" name="h_in" disabled>
     </div>
     <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">i. Quand vous avez fait la dernière échographie
       ? (Apporter le compte rendu avec vous le jour de la consultation)</label>
@@ -1142,9 +1142,9 @@
     <h3>XVI. Antécédents pédiatriques</h3>
     <label class="form-check-label" for="group">1. Né par : </label>
     <div class="btn-group btn-group-sm" role="group" aria-label="Basic radio toggle button group" id="group" name="pediatri_1">
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+      <input type="radio" class="btn-check" name="voix" id="btnradio1" autocomplete="off" value="voie basse">
       <label class="btn btn-outline-primary" for="btnradio1">voie basse </label>
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <input type="radio" class="btn-check" name="voix" id="btnradio2" autocomplete="off" value="césarienne">
       <label class="btn btn-outline-primary" for="btnradio2">césarienne </label>
     </div>
     <div class="form-check form-switch">
@@ -1172,7 +1172,7 @@
       <div class="input-group-text">
         <input class="form-check-input" type="checkbox" id="pediatri_6" name="pediatri_6">
       </div>
-      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="pediatri_6_in"
+      <input type="text" value="preciser" class="form-control" aria-label="Text input with checkbox" id="pediatri_6_in" name="pediatri_6_in"
         disabled>
     </div>
     <div class="form-check form-switch">
@@ -1182,20 +1182,20 @@
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">8. A quel âge ton enfant a acquis la position assise ?</label>
-      <input type="number" class="form-control" id="pediatri_8_in" value="00" >
+      <input type="number" class="form-control" id="pediatri_8_in" name="pediatri_8" value="00" >
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">9. A quel âge ton enfant a acquis la marche ? </label>
-      <input type="number" class="form-control" id="pediatri_9_in" value="00" >
+      <input type="number" class="form-control" id="pediatri_9_in" name="pediatri_9" value="00" >
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">10. A quel âge ton enfant a commencé de parler ? </label>
-      <input type="number" class="form-control" id="pediatri_10_in" value="00" >
+      <input type="number" class="form-control" id="pediatri_10_in" name="pediatri_10" value="00" >
     </div>
     <div class="form-check row">
       <label class="form-check-label" for="exampleCheck1">11. A quel âge ton enfant a appris à tenir sa tête tout seul ?
       </label>
-      <input type="number" class="form-control" id="pediatri_11_in" value="00" >
+      <input type="number" class="form-control" id="pediatri_11_in" name="pediatri_11" value="00" >
     </div>
     <div class="form-check form-switch">
       <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="pediatri_12">
@@ -1253,15 +1253,15 @@
         <col>
         <colgroup span="4"></colgroup>
         <tr>
-          <th rowspan="2">Médicament (Veuillez écrire en lettres MAJUSCULES)</th>
-          <th rowspan="2">Dose</th>
+          <th rowspan="2" name="meds">Médicament (Veuillez écrire en lettres MAJUSCULES)</th>
+          <th rowspan="2" name="dose">Dose</th>
           <th colspan="4" scope="colgroup">Nombre de comprimés</th>
         </tr>
         <tr>
-          <th scope="col" style="width: max-content;">Matin</th>
-          <th scope="col" style="width: max-content;">Midi</th>
-          <th scope="col" style="width: max-content;">Soir</th>
-          <th scope="col" style="width: max-content;">Nuit</th>
+          <th scope="col" name="matin" style="width: max-content;">Matin</th>
+          <th scope="col" name="midi" style="width: max-content;">Midi</th>
+          <th scope="col" name="soir" style="width: max-content;">Soir</th>
+          <th scope="col" name="nuit" style="width: max-content;">Nuit</th>
         </tr>
       </thead>
     </table>
@@ -1289,21 +1289,27 @@
         var op44in = document.createElement('input');
         console.log('1111111111111111111');
         td11in.value = meds;
+        td11in.name = 'meds';
         td11in.style.width = "100%" ;
         td11.appendChild(td11in);
         td22in.value = dose;
+        td22in.name = 'dose';
         td22in.style.width = "50px" ;
         td22.appendChild(td22in);
         op11in.value = matin;
+        op11in.name = 'matin';
         op11in.style.width = "50px" ;
         op11.appendChild(op11in);
         op22in.value = midi;
+        op22in.name = 'midi';
         op22in.style.width = "50px" ;
         op22.appendChild(op22in);
         op33in.value = soir;
+        op33in.name = 'soir';
         op33in.style.width = "50px" ;
         op33.appendChild(op33in);
         op44in.value = nuit;
+        op44in.name = 'nuit';
         op44in.style.width = "50px" ;
         op44.appendChild(op44in);
         trr.appendChild(td11);
@@ -1319,10 +1325,10 @@
   </div>
 
   <div class="col-md-4 tab" style="display: none;">
-    <label for="validationCustomUsername" class="form-label">Username</label>
+    <label for="validationCustomUsername" class="form-label">Verifier votre mot de passe</label>
     <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">@</span>
-      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+      <span class="input-group-text" id="inputGroupPrepend">$</span>
+      <input type="password" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="password"
         required>
     </div>
   </div>
