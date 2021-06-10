@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from django.utils.translation import gettext_lazy as _
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,8 @@ SECRET_KEY = "django-insecure-q_pcbh1dm#o!0%fn@6uyr7rxs$c!05ax60b)s&0183k7sw^dm#
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -67,6 +70,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -82,6 +86,8 @@ POSTGRES_DB = os.environ.get('POSTGRES_DB',default="")
 POSTGRES_HOST = os.environ.get('POSTGRES_HOST',default="")
 POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD',default="")
 POSTGRES_USER = os.environ.get('POSTGRES_USER',default="")
+
+
 
 DATABASES = {
     "default": {
@@ -155,3 +161,6 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
+MEDIA_URL= "/media/"

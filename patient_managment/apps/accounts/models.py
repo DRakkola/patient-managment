@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # This is an auto-generated Django model module.
 # You'll have to do the following manually to clean this up:
@@ -8,6 +9,8 @@ from django.contrib.auth.models import User
 #   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
+
+
 class AccountsUsergroups(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.CharField(unique=True, max_length=50)
@@ -481,12 +484,20 @@ class Patient(models.Model):
     family_stats = models.CharField(max_length=255, blank=True, null=True)
     hospital_service = models.CharField(max_length=255, blank=True, null=True)
     adresse = models.CharField(max_length=255, blank=True, null=True)
-    profile_pic = models.ImageField(null=True,blank=True)
+    profile_pic = models.ImageField(null=True,blank=True,default='')
 
     class Meta:
         managed = False
         db_table = 'patient'
 
+class pics(models.Model):
+    pic = models.ImageField(upload_to='images/',null=True, blank=True)
+    discription = models.CharField(max_length=255 ,blank=False,null=False)
+    dossierid = models.ForeignKey(Dossier, models.DO_NOTHING, db_column='dossierid')
+    def __str__(self):
+        return self.name + ": " + str(self.imagefile)
+    def get_absolute_url(self):
+        return reverse('accounts:pics_list')
 
 class Pediatriques(models.Model):
     pediatri_1 = models.CharField(max_length=255, blank=True, null=True)

@@ -1,3 +1,6 @@
+from django.forms import fields
+from patient_managment.settings import POSTGRES_DB
+from patient_managment.apps.accounts.models import Form
 from django import forms
 genre = ("homme","femme")
 class registerform(forms.Form):
@@ -11,3 +14,4 @@ class registerform(forms.Form):
     family_stats = forms.CharField(widget=forms.TextInput())
     hospital_service = forms.CharField(widget=forms.TextInput())
     adresse = forms.CharField(widget=forms.TextInput())
+

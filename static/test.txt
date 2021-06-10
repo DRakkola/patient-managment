@@ -1,0 +1,1247 @@
+patient_profile: Mark :accesed:by:root:2021-06-10 03:37:24,038
+patient_profile: Mark :accesed:by:root:2021-06-10 03:37:25,501
+patient_profile: Mark :accesed:by:root:2021-06-10 03:37:26,713
+patient_profile: Mark :accesed:by:root:2021-06-10 03:37:27,950
+patient_profile: Mark :accesed:by:root:2021-06-10 03:38:18,185
+patient_form: form#91:dossier#6:added:by:root:2021-06-10 03:38:34,245
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:38:53,785
+__init__:Using selector: EpollSelector:2021-06-10 03:38:53,786
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:39:17,525
+__init__:Using selector: EpollSelector:2021-06-10 03:39:17,528
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:39:35,215
+__init__:Using selector: EpollSelector:2021-06-10 03:39:35,218
+patient_profile: Mark :accesed:by:root:2021-06-10 03:41:00,430
+patient_profile: Mark :accesed:by:root:2021-06-10 03:43:38,091
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 03:44:12,925
+__init__:Using selector: EpollSelector:2021-06-10 03:44:12,940
+trigger_reload:/app/patient_managment/settings.py changed, reloading.:2021-06-10 03:49:19,804
+__init__:Using selector: EpollSelector:2021-06-10 03:49:19,807
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 03:50:40,012
+__init__:Using selector: EpollSelector:2021-06-10 03:50:40,013
+__init__:Using selector: EpollSelector:2021-06-10 11:51:55,765
+__init__:Using selector: EpollSelector:2021-06-10 11:51:57,349
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 11:52:03,242
+__init__:Using selector: EpollSelector:2021-06-10 11:52:03,246
+__init__:Using selector: EpollSelector:2021-06-10 11:52:10,088
+__init__:Using selector: EpollSelector:2021-06-10 11:52:11,632
+__init__:Using selector: EpollSelector:2021-06-10 11:52:29,852
+__init__:Using selector: EpollSelector:2021-06-10 11:52:45,903
+__init__:Using selector: EpollSelector:2021-06-10 11:52:47,449
+__init__:Using selector: EpollSelector:2021-06-10 11:52:58,445
+__init__:Using selector: EpollSelector:2021-06-10 11:52:59,977
+__init__:Using selector: EpollSelector:2021-06-10 11:54:09,578
+__init__:Using selector: EpollSelector:2021-06-10 11:54:11,198
+__init__:Using selector: EpollSelector:2021-06-10 11:54:17,110
+__init__:Using selector: EpollSelector:2021-06-10 11:54:18,620
+__init__:Using selector: EpollSelector:2021-06-10 11:54:38,146
+__init__:Using selector: EpollSelector:2021-06-10 11:54:39,784
+__init__:Using selector: EpollSelector:2021-06-10 11:54:46,079
+__init__:Using selector: EpollSelector:2021-06-10 11:54:47,639
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 11:54:51,056
+__init__:Using selector: EpollSelector:2021-06-10 11:54:51,060
+__init__:Using selector: EpollSelector:2021-06-10 11:54:56,894
+__init__:Using selector: EpollSelector:2021-06-10 11:54:58,483
+__init__:Using selector: EpollSelector:2021-06-10 11:55:04,668
+__init__:Using selector: EpollSelector:2021-06-10 11:55:06,220
+__init__:Using selector: EpollSelector:2021-06-10 11:55:40,137
+__init__:Using selector: EpollSelector:2021-06-10 11:55:41,634
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 12:01:00,511
+__init__:Using selector: EpollSelector:2021-06-10 12:01:00,514
+trigger_reload:/app/patient_managment/urls.py changed, reloading.:2021-06-10 12:01:06,237
+__init__:Using selector: EpollSelector:2021-06-10 12:01:06,241
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 12:01:24,955
+__init__:Using selector: EpollSelector:2021-06-10 12:01:24,958
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 12:02:38,074
+__init__:Using selector: EpollSelector:2021-06-10 12:02:38,077
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 12:02:45,620
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'csrf_tocken'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 618, in media
+    return render(request,"accounts/patient_media.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'csrf_tocken', expected 'endblock'. Did you forget to register or load this tag?
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 12:02:55,817
+__init__:Using selector: EpollSelector:2021-06-10 12:02:55,818
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 12:02:57,787
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 618, in media
+    return render(request,"accounts/patient_media.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 449, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' p' from 'form.as p'
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 12:03:13,534
+__init__:Using selector: EpollSelector:2021-06-10 12:03:13,536
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 12:03:17,422
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 618, in media
+    return render(request,"accounts/patient_media.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 449, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 662, in __init__
+    raise TemplateSyntaxError("Could not parse the remainder: '%s' "
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '-p' from 'form.as-p'
+trigger_reload:/app/patient_managment/templates/accounts/patient_media.html changed, reloading.:2021-06-10 12:03:22,185
+__init__:Using selector: EpollSelector:2021-06-10 12:03:22,187
+trigger_reload:/app/patient_managment/apps/accounts/forms.py changed, reloading.:2021-06-10 12:27:55,457
+__init__:Using selector: EpollSelector:2021-06-10 12:27:55,461
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 12:31:13,529
+__init__:Using selector: EpollSelector:2021-06-10 12:31:13,538
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 12:32:20,625
+__init__:Using selector: EpollSelector:2021-06-10 12:32:20,627
+patient_profile: Mark :accesed:by:root:2021-06-10 12:32:33,068
+patient_profile: Mark :accesed:by:root:2021-06-10 12:32:33,861
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 12:32:34,919
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: as_view() takes 1 positional argument but 2 were given
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 12:46:58,017
+__init__:Using selector: EpollSelector:2021-06-10 12:46:58,018
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 12:47:02,550
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/list.py", line 142, in get
+    self.object_list = self.get_queryset()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/list.py", line 35, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: media is missing a QuerySet. Define media.model, media.queryset, or override media.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:04:29,926
+__init__:Using selector: EpollSelector:2021-06-10 13:04:29,927
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 13:04:34,619
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/pics_list.html
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:05:09,848
+__init__:Using selector: EpollSelector:2021-06-10 13:05:09,855
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 13:05:14,163
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/pics_list.html
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:10:27,844
+__init__:Using selector: EpollSelector:2021-06-10 13:10:27,851
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:11:19,802
+__init__:Using selector: EpollSelector:2021-06-10 13:11:19,805
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 13:11:23,755
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/pics_list.html
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:12:22,885
+__init__:Using selector: EpollSelector:2021-06-10 13:12:22,885
+log_response:Internal Server Error: /en/accounts/patient_media:2021-06-10 13:12:25,252
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/pics_list.html
+trigger_reload:/app/patient_managment/templates/accounts changed, reloading.:2021-06-10 13:12:54,758
+__init__:Using selector: EpollSelector:2021-06-10 13:12:54,759
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:13:10,463
+__init__:Using selector: EpollSelector:2021-06-10 13:13:10,465
+log_response:Not Found: /en/accounts/patient_media:2021-06-10 13:13:12,578
+log_response:Not Found: /en/accounts/patient_media:2021-06-10 13:13:23,805
+trigger_reload:/app/patient_managment/templates/accounts/dossier.html changed, reloading.:2021-06-10 13:13:53,366
+__init__:Using selector: EpollSelector:2021-06-10 13:13:53,370
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 13:18:35,147
+__init__:Using selector: EpollSelector:2021-06-10 13:18:35,149
+__init__:Using selector: EpollSelector:2021-06-10 13:18:41,564
+__init__:Using selector: EpollSelector:2021-06-10 13:18:43,342
+__init__:Using selector: EpollSelector:2021-06-10 13:18:51,633
+__init__:Using selector: EpollSelector:2021-06-10 13:18:53,081
+trigger_reload:/app/patient_managment/templates/accounts changed, reloading.:2021-06-10 13:25:30,945
+__init__:Using selector: EpollSelector:2021-06-10 13:25:30,947
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:27:20,420
+__init__:Using selector: EpollSelector:2021-06-10 13:27:20,427
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:27:56,307
+__init__:Using selector: EpollSelector:2021-06-10 13:27:56,313
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 13:28:41,206
+__init__:Using selector: EpollSelector:2021-06-10 13:28:41,210
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:29:23,247
+__init__:Using selector: EpollSelector:2021-06-10 13:29:23,251
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 13:30:08,193
+__init__:Using selector: EpollSelector:2021-06-10 13:30:08,196
+trigger_reload:/app/patient_managment/templates/accounts/add_image.html changed, reloading.:2021-06-10 13:30:18,857
+__init__:Using selector: EpollSelector:2021-06-10 13:30:18,860
+log_response:Internal Server Error: /en/accounts/pics_list:2021-06-10 13:30:22,037
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'accounts/add_image' not found. 'accounts/add_image' is not a valid view function or pattern name.
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 13:30:31,544
+__init__:Using selector: EpollSelector:2021-06-10 13:30:31,548
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:30:34,667
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/detail.py", line 69, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: add_pic is missing a QuerySet. Define add_pic.model, add_pic.queryset, or override add_pic.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:31:43,736
+__init__:Using selector: EpollSelector:2021-06-10 13:31:43,738
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:31:46,580
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/detail.py", line 69, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: add_pic is missing a QuerySet. Define add_pic.model, add_pic.queryset, or override add_pic.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:34:20,548
+__init__:Using selector: EpollSelector:2021-06-10 13:34:20,548
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:34:23,297
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/detail.py", line 69, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: add_pic is missing a QuerySet. Define add_pic.model, add_pic.queryset, or override add_pic.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:36:27,112
+__init__:Using selector: EpollSelector:2021-06-10 13:36:27,112
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:36:35,672
+__init__:Using selector: EpollSelector:2021-06-10 13:36:35,673
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:36:38,908
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/detail.py", line 69, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: add_picView is missing a QuerySet. Define add_picView.model, add_picView.queryset, or override add_picView.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:38:53,281
+__init__:Using selector: EpollSelector:2021-06-10 13:38:53,289
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:39:02,832
+__init__:Using selector: EpollSelector:2021-06-10 13:39:02,834
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:39:05,319
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 168, in get
+    return super().get(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 133, in get
+    return self.render_to_response(self.get_context_data())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 66, in get_context_data
+    kwargs['form'] = self.get_form()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 32, in get_form
+    form_class = self.get_form_class()
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 93, in get_form_class
+    model = self.get_queryset().model
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/detail.py", line 69, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: addpicsView is missing a QuerySet. Define addpicsView.model, addpicsView.queryset, or override addpicsView.get_queryset().
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:40:32,106
+__init__:Using selector: EpollSelector:2021-06-10 13:40:32,107
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:40:34,618
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: add_image.html
+patient_profile: Mark :accesed:by:root:2021-06-10 13:40:46,117
+patient_profile: Mark :accesed:by:root:2021-06-10 13:40:46,998
+patient_profile: Mark :accesed:by:root:2021-06-10 13:40:48,040
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:40:50,545
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: add_image.html
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:41:53,364
+__init__:Using selector: EpollSelector:2021-06-10 13:41:53,366
+log_response:Not Found: /en/accounts/add_image/:2021-06-10 13:41:55,092
+log_response:Not Found: /en/accounts/add_image/:2021-06-10 13:41:59,146
+log_response:Internal Server Error: /en/accounts/add_image:2021-06-10 13:42:30,742
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: add_image.html
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 13:42:39,333
+__init__:Using selector: EpollSelector:2021-06-10 13:42:39,334
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:42:52,002
+__init__:Using selector: EpollSelector:2021-06-10 13:42:52,005
+trigger_reload:/app/patient_managment/templates/accounts/add_image.html changed, reloading.:2021-06-10 13:44:11,248
+__init__:Using selector: EpollSelector:2021-06-10 13:44:11,250
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 13:45:13,424
+__init__:Using selector: EpollSelector:2021-06-10 13:45:13,426
+trigger_reload:/app/patient_managment/templates/accounts/add_image.html changed, reloading.:2021-06-10 13:46:04,407
+__init__:Using selector: EpollSelector:2021-06-10 13:46:04,410
+trigger_reload:/app/patient_managment/templates/accounts/add_image.html changed, reloading.:2021-06-10 13:46:51,357
+__init__:Using selector: EpollSelector:2021-06-10 13:46:51,362
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:47:30,708
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "dossierid" of relation "accounts_pics" violates not-null constraint
+DETAIL:  Failing row contains (1, , docteur d'anesthesie, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 125, in form_valid
+    self.object = form.save()
+  File "/usr/local/lib/python3.9/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "dossierid" of relation "accounts_pics" violates not-null constraint
+DETAIL:  Failing row contains (1, , docteur d'anesthesie, null).
+
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 13:51:37,677
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "dossierid" of relation "accounts_pics" violates not-null constraint
+DETAIL:  Failing row contains (2, , docteur d'anesthesie, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 125, in form_valid
+    self.object = form.save()
+  File "/usr/local/lib/python3.9/site-packages/django/forms/models.py", line 468, in save
+    self.instance.save()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/base.py", line 906, in _do_insert
+    return manager._insert(
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.9/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "dossierid" of relation "accounts_pics" violates not-null constraint
+DETAIL:  Failing row contains (2, , docteur d'anesthesie, null).
+
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 14:05:35,627
+__init__:Using selector: EpollSelector:2021-06-10 14:05:35,628
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:05:44,822
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 632, in form_valid
+    form.instance.dossierid = pics.objects.filter(dossierid=self.request.session.get('did'))
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<QuerySet []>": "pics.dossierid" must be a "Dossier" instance.
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 14:06:21,605
+__init__:Using selector: EpollSelector:2021-06-10 14:06:21,606
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:06:28,713
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 632, in form_valid
+    form.instance.dossierid = Dossier.objects.filter(pk=self.request.session.get('did'))
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<QuerySet [<Dossier: Dossier object (6)>]>": "pics.dossierid" must be a "Dossier" instance.
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 14:06:43,337
+__init__:Using selector: EpollSelector:2021-06-10 14:06:43,341
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:06:46,805
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 632, in form_valid
+    form.instance.dossierid = Dossier.objects.filter(pk=self.request.session.get('did')).pk
+AttributeError: 'QuerySet' object has no attribute 'pk'
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 14:08:11,604
+__init__:Using selector: EpollSelector:2021-06-10 14:08:11,611
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:08:15,027
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 116, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'pics' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 633, in form_valid
+    return super(addpicsView, self).form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 118, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:10:36,350
+__init__:Using selector: EpollSelector:2021-06-10 14:10:36,351
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:10:40,112
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 633, in form_valid
+    return super(addpicsView, self).form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 116, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/app/patient_managment/apps/accounts/models.py", line 500, in get_absolute_url
+    return reverse('pics_list',args=(str(self.id)))
+  File "/usr/local/lib/python3.9/site-packages/django/urls/base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'pics_list' not found. 'pics_list' is not a valid view function or pattern name.
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:11:49,610
+__init__:Using selector: EpollSelector:2021-06-10 14:11:49,614
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:11:55,214
+__init__:Using selector: EpollSelector:2021-06-10 14:11:55,216
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:11:59,445
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 633, in form_valid
+    return super(addpicsView, self).form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 116, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/app/patient_managment/apps/accounts/models.py", line 500, in get_absolute_url
+    return reverse('accounts/pics_list',args=(str(self.id)))
+  File "/usr/local/lib/python3.9/site-packages/django/urls/base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'accounts/pics_list' not found. 'accounts/pics_list' is not a valid view function or pattern name.
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:12:18,982
+__init__:Using selector: EpollSelector:2021-06-10 14:12:18,983
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:12:21,855
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 633, in form_valid
+    return super(addpicsView, self).form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 116, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/app/patient_managment/apps/accounts/models.py", line 500, in get_absolute_url
+    return reverse('media',args=(str(self.id)))
+  File "/usr/local/lib/python3.9/site-packages/django/urls/base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'media' not found. 'media' is not a valid view function or pattern name.
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:13:27,162
+__init__:Using selector: EpollSelector:2021-06-10 14:13:27,163
+log_response:Internal Server Error: /en/accounts/add_image/:2021-06-10 14:13:31,850
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/app/patient_managment/apps/accounts/views.py", line 633, in form_valid
+    return super(addpicsView, self).form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 126, in form_valid
+    return super().form_valid(form)
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 57, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/usr/local/lib/python3.9/site-packages/django/views/generic/edit.py", line 116, in get_success_url
+    url = self.object.get_absolute_url()
+  File "/app/patient_managment/apps/accounts/models.py", line 500, in get_absolute_url
+    return reverse('pics_list')
+  File "/usr/local/lib/python3.9/site-packages/django/urls/base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/urls/resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'pics_list' not found. 'pics_list' is not a valid view function or pattern name.
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 14:14:13,247
+__init__:Using selector: EpollSelector:2021-06-10 14:14:13,254
+trigger_reload:/app/patient_managment/templates/accounts/add_image.html changed, reloading.:2021-06-10 14:17:07,257
+__init__:Using selector: EpollSelector:2021-06-10 14:17:07,260
+call:STREAM b'IHDR' 16 13:2021-06-10 14:17:15,180
+call:STREAM b'sRGB' 41 1:2021-06-10 14:17:15,182
+call:STREAM b'gAMA' 54 4:2021-06-10 14:17:15,182
+call:STREAM b'pHYs' 70 9:2021-06-10 14:17:15,182
+call:STREAM b'IDAT' 91 65445:2021-06-10 14:17:15,182
+init:Importing BlpImagePlugin:2021-06-10 14:17:15,183
+init:Importing BmpImagePlugin:2021-06-10 14:17:15,184
+init:Importing BufrStubImagePlugin:2021-06-10 14:17:15,184
+init:Importing CurImagePlugin:2021-06-10 14:17:15,184
+init:Importing DcxImagePlugin:2021-06-10 14:17:15,185
+init:Importing DdsImagePlugin:2021-06-10 14:17:15,186
+init:Importing EpsImagePlugin:2021-06-10 14:17:15,186
+init:Importing FitsStubImagePlugin:2021-06-10 14:17:15,187
+init:Importing FliImagePlugin:2021-06-10 14:17:15,188
+init:Importing FpxImagePlugin:2021-06-10 14:17:15,188
+init:Image: failed to import FpxImagePlugin: No module named 'olefile':2021-06-10 14:17:15,189
+init:Importing FtexImagePlugin:2021-06-10 14:17:15,189
+init:Importing GbrImagePlugin:2021-06-10 14:17:15,190
+init:Importing GifImagePlugin:2021-06-10 14:17:15,190
+init:Importing GribStubImagePlugin:2021-06-10 14:17:15,190
+init:Importing Hdf5StubImagePlugin:2021-06-10 14:17:15,191
+init:Importing IcnsImagePlugin:2021-06-10 14:17:15,191
+init:Importing IcoImagePlugin:2021-06-10 14:17:15,193
+init:Importing ImImagePlugin:2021-06-10 14:17:15,193
+init:Importing ImtImagePlugin:2021-06-10 14:17:15,194
+init:Importing IptcImagePlugin:2021-06-10 14:17:15,195
+init:Importing JpegImagePlugin:2021-06-10 14:17:15,196
+init:Importing Jpeg2KImagePlugin:2021-06-10 14:17:15,196
+init:Importing McIdasImagePlugin:2021-06-10 14:17:15,196
+init:Importing MicImagePlugin:2021-06-10 14:17:15,197
+init:Image: failed to import MicImagePlugin: No module named 'olefile':2021-06-10 14:17:15,197
+init:Importing MpegImagePlugin:2021-06-10 14:17:15,197
+init:Importing MpoImagePlugin:2021-06-10 14:17:15,198
+init:Importing MspImagePlugin:2021-06-10 14:17:15,198
+init:Importing PalmImagePlugin:2021-06-10 14:17:15,199
+init:Importing PcdImagePlugin:2021-06-10 14:17:15,200
+init:Importing PcxImagePlugin:2021-06-10 14:17:15,200
+init:Importing PdfImagePlugin:2021-06-10 14:17:15,201
+init:Importing PixarImagePlugin:2021-06-10 14:17:15,206
+init:Importing PngImagePlugin:2021-06-10 14:17:15,207
+init:Importing PpmImagePlugin:2021-06-10 14:17:15,208
+init:Importing PsdImagePlugin:2021-06-10 14:17:15,208
+init:Importing SgiImagePlugin:2021-06-10 14:17:15,209
+init:Importing SpiderImagePlugin:2021-06-10 14:17:15,209
+init:Importing SunImagePlugin:2021-06-10 14:17:15,210
+init:Importing TgaImagePlugin:2021-06-10 14:17:15,210
+init:Importing TiffImagePlugin:2021-06-10 14:17:15,211
+init:Importing WebPImagePlugin:2021-06-10 14:17:15,211
+init:Importing WmfImagePlugin:2021-06-10 14:17:15,214
+init:Importing XbmImagePlugin:2021-06-10 14:17:15,215
+init:Importing XpmImagePlugin:2021-06-10 14:17:15,216
+init:Importing XVThumbImagePlugin:2021-06-10 14:17:15,217
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:20:06,323
+__init__:Using selector: EpollSelector:2021-06-10 14:20:06,325
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:24:35,136
+__init__:Using selector: EpollSelector:2021-06-10 14:24:35,139
+log_response:Not Found: /en/accounts/images/git.png:2021-06-10 14:24:39,273
+trigger_reload:/app/patient_managment/apps/accounts/urls.py changed, reloading.:2021-06-10 14:27:24,063
+__init__:Using selector: EpollSelector:2021-06-10 14:27:24,067
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:29:15,537
+__init__:Using selector: EpollSelector:2021-06-10 14:29:15,539
+log_response:Internal Server Error: /en/accounts/pics_list:2021-06-10 14:29:19,024
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/files.py", line 63, in url
+    self._require_file()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/files.py", line 40, in _require_file
+    raise ValueError("The '%s' attribute has no file associated with it." % self.field.name)
+ValueError: The 'pic' attribute has no file associated with it.
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:30:02,501
+__init__:Using selector: EpollSelector:2021-06-10 14:30:02,506
+log_response:Internal Server Error: /en/accounts/pics_list:2021-06-10 14:30:04,886
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/usr/local/lib/python3.9/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/defaulttags.py", line 211, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/files.py", line 63, in url
+    self._require_file()
+  File "/usr/local/lib/python3.9/site-packages/django/db/models/fields/files.py", line 40, in _require_file
+    raise ValueError("The '%s' attribute has no file associated with it." % self.field.name)
+ValueError: The 'pic' attribute has no file associated with it.
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:30:49,448
+__init__:Using selector: EpollSelector:2021-06-10 14:30:49,449
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:31:11,192
+__init__:Using selector: EpollSelector:2021-06-10 14:31:11,194
+call:STREAM b'IHDR' 16 13:2021-06-10 14:32:49,337
+call:STREAM b'sRGB' 41 1:2021-06-10 14:32:49,339
+call:STREAM b'gAMA' 54 4:2021-06-10 14:32:49,339
+call:STREAM b'pHYs' 70 9:2021-06-10 14:32:49,340
+call:STREAM b'IDAT' 91 65445:2021-06-10 14:32:49,340
+init:Importing BlpImagePlugin:2021-06-10 14:32:49,341
+init:Importing BmpImagePlugin:2021-06-10 14:32:49,341
+init:Importing BufrStubImagePlugin:2021-06-10 14:32:49,342
+init:Importing CurImagePlugin:2021-06-10 14:32:49,343
+init:Importing DcxImagePlugin:2021-06-10 14:32:49,343
+init:Importing DdsImagePlugin:2021-06-10 14:32:49,344
+init:Importing EpsImagePlugin:2021-06-10 14:32:49,344
+init:Importing FitsStubImagePlugin:2021-06-10 14:32:49,345
+init:Importing FliImagePlugin:2021-06-10 14:32:49,346
+init:Importing FpxImagePlugin:2021-06-10 14:32:49,346
+init:Image: failed to import FpxImagePlugin: No module named 'olefile':2021-06-10 14:32:49,347
+init:Importing FtexImagePlugin:2021-06-10 14:32:49,347
+init:Importing GbrImagePlugin:2021-06-10 14:32:49,347
+init:Importing GifImagePlugin:2021-06-10 14:32:49,348
+init:Importing GribStubImagePlugin:2021-06-10 14:32:49,348
+init:Importing Hdf5StubImagePlugin:2021-06-10 14:32:49,349
+init:Importing IcnsImagePlugin:2021-06-10 14:32:49,349
+init:Importing IcoImagePlugin:2021-06-10 14:32:49,351
+init:Importing ImImagePlugin:2021-06-10 14:32:49,351
+init:Importing ImtImagePlugin:2021-06-10 14:32:49,352
+init:Importing IptcImagePlugin:2021-06-10 14:32:49,353
+init:Importing JpegImagePlugin:2021-06-10 14:32:49,353
+init:Importing Jpeg2KImagePlugin:2021-06-10 14:32:49,354
+init:Importing McIdasImagePlugin:2021-06-10 14:32:49,354
+init:Importing MicImagePlugin:2021-06-10 14:32:49,355
+init:Image: failed to import MicImagePlugin: No module named 'olefile':2021-06-10 14:32:49,356
+init:Importing MpegImagePlugin:2021-06-10 14:32:49,356
+init:Importing MpoImagePlugin:2021-06-10 14:32:49,356
+init:Importing MspImagePlugin:2021-06-10 14:32:49,357
+init:Importing PalmImagePlugin:2021-06-10 14:32:49,357
+init:Importing PcdImagePlugin:2021-06-10 14:32:49,358
+init:Importing PcxImagePlugin:2021-06-10 14:32:49,359
+init:Importing PdfImagePlugin:2021-06-10 14:32:49,360
+init:Importing PixarImagePlugin:2021-06-10 14:32:49,365
+init:Importing PngImagePlugin:2021-06-10 14:32:49,366
+init:Importing PpmImagePlugin:2021-06-10 14:32:49,367
+init:Importing PsdImagePlugin:2021-06-10 14:32:49,367
+init:Importing SgiImagePlugin:2021-06-10 14:32:49,368
+init:Importing SpiderImagePlugin:2021-06-10 14:32:49,368
+init:Importing SunImagePlugin:2021-06-10 14:32:49,369
+init:Importing TgaImagePlugin:2021-06-10 14:32:49,370
+init:Importing TiffImagePlugin:2021-06-10 14:32:49,370
+init:Importing WebPImagePlugin:2021-06-10 14:32:49,370
+init:Importing WmfImagePlugin:2021-06-10 14:32:49,371
+init:Importing XbmImagePlugin:2021-06-10 14:32:49,372
+init:Importing XpmImagePlugin:2021-06-10 14:32:49,374
+init:Importing XVThumbImagePlugin:2021-06-10 14:32:49,374
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:34:28,373
+__init__:Using selector: EpollSelector:2021-06-10 14:34:28,374
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:34:47,063
+__init__:Using selector: EpollSelector:2021-06-10 14:34:47,065
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:34:56,748
+__init__:Using selector: EpollSelector:2021-06-10 14:34:56,751
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:35:45,701
+__init__:Using selector: EpollSelector:2021-06-10 14:35:45,705
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:36:38,663
+__init__:Using selector: EpollSelector:2021-06-10 14:36:38,666
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:37:05,442
+__init__:Using selector: EpollSelector:2021-06-10 14:37:05,445
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:37:48,386
+__init__:Using selector: EpollSelector:2021-06-10 14:37:48,389
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:37:59,033
+__init__:Using selector: EpollSelector:2021-06-10 14:37:59,034
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:38:11,735
+__init__:Using selector: EpollSelector:2021-06-10 14:38:11,737
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:38:18,374
+__init__:Using selector: EpollSelector:2021-06-10 14:38:18,376
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:39:41,653
+__init__:Using selector: EpollSelector:2021-06-10 14:39:41,658
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:39:56,329
+__init__:Using selector: EpollSelector:2021-06-10 14:39:56,331
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:40:23,119
+__init__:Using selector: EpollSelector:2021-06-10 14:40:23,121
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:41:24,200
+__init__:Using selector: EpollSelector:2021-06-10 14:41:24,202
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:41:32,863
+__init__:Using selector: EpollSelector:2021-06-10 14:41:32,866
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:42:14,808
+__init__:Using selector: EpollSelector:2021-06-10 14:42:14,811
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:42:31,511
+__init__:Using selector: EpollSelector:2021-06-10 14:42:31,513
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:42:48,245
+__init__:Using selector: EpollSelector:2021-06-10 14:42:48,247
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:43:13,025
+__init__:Using selector: EpollSelector:2021-06-10 14:43:13,027
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:43:28,719
+__init__:Using selector: EpollSelector:2021-06-10 14:43:28,723
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:44:26,738
+__init__:Using selector: EpollSelector:2021-06-10 14:44:26,742
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:44:43,455
+__init__:Using selector: EpollSelector:2021-06-10 14:44:43,457
+trigger_reload:/app/patient_managment/templates/accounts/pics_list.html changed, reloading.:2021-06-10 14:44:56,123
+__init__:Using selector: EpollSelector:2021-06-10 14:44:56,127
+patient_profile: almansouriJR :accesed:by:root:2021-06-10 14:46:13,865
+patient_profile: almansouriJR :accesed:by:root:2021-06-10 14:46:14,957
+call:STREAM b'IHDR' 16 13:2021-06-10 14:46:25,641
+call:STREAM b'sRGB' 41 1:2021-06-10 14:46:25,642
+call:STREAM b'gAMA' 54 4:2021-06-10 14:46:25,643
+call:STREAM b'pHYs' 70 9:2021-06-10 14:46:25,643
+call:STREAM b'IDAT' 91 51827:2021-06-10 14:46:25,644
+init:Importing BlpImagePlugin:2021-06-10 14:46:25,644
+init:Importing BmpImagePlugin:2021-06-10 14:46:25,645
+init:Importing BufrStubImagePlugin:2021-06-10 14:46:25,645
+init:Importing CurImagePlugin:2021-06-10 14:46:25,645
+init:Importing DcxImagePlugin:2021-06-10 14:46:25,646
+init:Importing DdsImagePlugin:2021-06-10 14:46:25,647
+init:Importing EpsImagePlugin:2021-06-10 14:46:25,647
+init:Importing FitsStubImagePlugin:2021-06-10 14:46:25,648
+init:Importing FliImagePlugin:2021-06-10 14:46:25,648
+init:Importing FpxImagePlugin:2021-06-10 14:46:25,649
+init:Image: failed to import FpxImagePlugin: No module named 'olefile':2021-06-10 14:46:25,649
+init:Importing FtexImagePlugin:2021-06-10 14:46:25,650
+init:Importing GbrImagePlugin:2021-06-10 14:46:25,651
+init:Importing GifImagePlugin:2021-06-10 14:46:25,651
+init:Importing GribStubImagePlugin:2021-06-10 14:46:25,651
+init:Importing Hdf5StubImagePlugin:2021-06-10 14:46:25,652
+init:Importing IcnsImagePlugin:2021-06-10 14:46:25,652
+init:Importing IcoImagePlugin:2021-06-10 14:46:25,653
+init:Importing ImImagePlugin:2021-06-10 14:46:25,654
+init:Importing ImtImagePlugin:2021-06-10 14:46:25,654
+init:Importing IptcImagePlugin:2021-06-10 14:46:25,655
+init:Importing JpegImagePlugin:2021-06-10 14:46:25,656
+init:Importing Jpeg2KImagePlugin:2021-06-10 14:46:25,656
+init:Importing McIdasImagePlugin:2021-06-10 14:46:25,656
+init:Importing MicImagePlugin:2021-06-10 14:46:25,657
+init:Image: failed to import MicImagePlugin: No module named 'olefile':2021-06-10 14:46:25,657
+init:Importing MpegImagePlugin:2021-06-10 14:46:25,657
+init:Importing MpoImagePlugin:2021-06-10 14:46:25,658
+init:Importing MspImagePlugin:2021-06-10 14:46:25,659
+init:Importing PalmImagePlugin:2021-06-10 14:46:25,659
+init:Importing PcdImagePlugin:2021-06-10 14:46:25,660
+init:Importing PcxImagePlugin:2021-06-10 14:46:25,661
+init:Importing PdfImagePlugin:2021-06-10 14:46:25,661
+init:Importing PixarImagePlugin:2021-06-10 14:46:25,666
+init:Importing PngImagePlugin:2021-06-10 14:46:25,667
+init:Importing PpmImagePlugin:2021-06-10 14:46:25,668
+init:Importing PsdImagePlugin:2021-06-10 14:46:25,668
+init:Importing SgiImagePlugin:2021-06-10 14:46:25,668
+init:Importing SpiderImagePlugin:2021-06-10 14:46:25,669
+init:Importing SunImagePlugin:2021-06-10 14:46:25,669
+init:Importing TgaImagePlugin:2021-06-10 14:46:25,670
+init:Importing TiffImagePlugin:2021-06-10 14:46:25,670
+init:Importing WebPImagePlugin:2021-06-10 14:46:25,671
+init:Importing WmfImagePlugin:2021-06-10 14:46:25,672
+init:Importing XbmImagePlugin:2021-06-10 14:46:25,672
+init:Importing XpmImagePlugin:2021-06-10 14:46:25,673
+init:Importing XVThumbImagePlugin:2021-06-10 14:46:25,674
+patient_profile: almansouriJR :accesed:by:root:2021-06-10 14:46:40,451
+patient_profile: almansouriJR :accesed:by:root:2021-06-10 14:46:41,377
+patient_profile: Mark :accesed:by:root:2021-06-10 14:47:48,492
+patient_profile: Mark :accesed:by:root:2021-06-10 14:47:50,094
+__init__:Using selector: EpollSelector:2021-06-10 14:54:02,903
+__init__:Using selector: EpollSelector:2021-06-10 14:54:19,740

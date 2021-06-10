@@ -1,0 +1,611 @@
+trigger_reload:2021-06-10 01:34:01,280:140188781725504
+__init__:2021-06-10 01:34:01,288:140188781725504
+log_response:2021-06-10 01:34:11,632:140685174843136
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 563, in patient_profile
+    logging.debug('Profil du pation :',Patient.name(pk=ok))
+TypeError: 'DeferredAttribute' object is not callable
+trigger_reload:2021-06-10 01:34:58,321:140685250410304
+__init__:2021-06-10 01:34:58,322:140685250410304
+trigger_reload:2021-06-10 01:35:58,362:140193055541056
+__init__:2021-06-10 01:35:58,363:140193055541056
+trigger_reload:2021-06-10 01:38:07,934
+__init__:2021-06-10 01:38:07,935
+patient_profile:2021-06-10 01:38:15,500
+patient_profile:2021-06-10 01:38:35,653
+patient_profile:2021-06-10 01:38:38,494
+patient_profile:2021-06-10 01:38:54,963
+patient_profile:2021-06-10 01:38:57,896
+trigger_reload:2021-06-10 01:40:19,565
+__init__:2021-06-10 01:40:19,566
+patient_profile:2021-06-10 01:40:26,196:msg
+trigger_reload:2021-06-10 01:41:09,573:msg
+__init__:2021-06-10 01:41:09,574:msg
+patient_profile:2021-06-10 01:41:14,740:accessed
+patient_profile:2021-06-10 01:41:29,869:accessed
+trigger_reload:2021-06-10 01:42:20,670:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:42:20,671:Using selector: EpollSelector
+patient_profile:2021-06-10 01:42:26,866:accessed
+trigger_reload:2021-06-10 01:43:21,708:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:43:21,716:Using selector: EpollSelector
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 01:43:31,371:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:Using selector: EpollSelector:2021-06-10 01:43:31,374:Using selector: EpollSelector
+trigger_reload:2021-06-10 01:45:39,936:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:45:39,937:Using selector: EpollSelector
+patient_profile:2021-06-10 01:45:44,305: debbichi raki :accesed
+trigger_reload:2021-06-10 01:47:45,439:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:47:45,440:Using selector: EpollSelector
+log_response:2021-06-10 01:47:49,181:Internal Server Error: /en/accounts/patient_profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 564, in patient_profile
+    logging.debug(' {} :accesed:by:{}'.format(data.name,current_user.name))
+  File "/usr/local/lib/python3.9/site-packages/django/utils/functional.py", line 247, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'name'
+trigger_reload:2021-06-10 01:48:27,330:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:48:27,330:Using selector: EpollSelector
+patient_profile:2021-06-10 01:48:29,878: Mark :accesed:by:root
+trigger_reload:2021-06-10 01:50:29,851:/app/patient_managment/apps/accounts/views.py changed, reloading.
+__init__:2021-06-10 01:50:29,852:Using selector: EpollSelector
+loginPage: root :logged in:2021-06-10 01:50:41,654
+trigger_reload:/app/patient_managment/apps/accounts/models.py changed, reloading.:2021-06-10 01:50:58,670
+__init__:Using selector: EpollSelector:2021-06-10 01:50:58,673
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 01:52:19,816
+__init__:Using selector: EpollSelector:2021-06-10 01:52:19,818
+log_response:Internal Server Error: /en/accounts/register:2021-06-10 01:52:45,909
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/app/patient_managment/apps/accounts/views.py", line 57, in register
+    logging.debug(' {} :added:by:{}'.format(ins.name,current_user.username))
+AttributeError: 'Phone' object has no attribute 'name'
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 01:53:00,720
+__init__:Using selector: EpollSelector:2021-06-10 01:53:00,721
+register: mohamed  :added:by:root:2021-06-10 01:53:03,836
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 01:53:46,637
+__init__:Using selector: EpollSelector:2021-06-10 01:53:46,638
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 02:00:49,117
+__init__:Using selector: EpollSelector:2021-06-10 02:00:49,124
+patient_profile: Mark :accesed:by:root:2021-06-10 02:00:55,974
+patient_profile: Mark :accesed:by:root:2021-06-10 02:01:04,017
+patient_form: form#89:dossier#6:added:by:root:2021-06-10 02:01:19,376
+trigger_reload:/app/patient_managment/apps/accounts/admin.py changed, reloading.:2021-06-10 02:17:46,777
+__init__:Using selector: EpollSelector:2021-06-10 02:17:46,780
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 02:22:36,455
+__init__:Using selector: EpollSelector:2021-06-10 02:22:36,459
+trigger_reload:/app/patient_managment/settings.py changed, reloading.:2021-06-10 02:36:21,204
+__init__:Using selector: EpollSelector:2021-06-10 02:36:21,207
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 02:52:28,370
+__init__:Using selector: EpollSelector:2021-06-10 02:52:28,372
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 02:52:41,021
+__init__:Using selector: EpollSelector:2021-06-10 02:52:41,023
+trigger_reload:/app/patient_managment/templates/admin changed, reloading.:2021-06-10 02:53:16,872
+__init__:Using selector: EpollSelector:2021-06-10 02:53:16,874
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 02:53:36,624
+__init__:Using selector: EpollSelector:2021-06-10 02:53:36,625
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 02:55:37,043
+__init__:Using selector: EpollSelector:2021-06-10 02:55:37,048
+trigger_reload:/app/patient_managment/urls.py changed, reloading.:2021-06-10 02:56:39,434
+__init__:Using selector: EpollSelector:2021-06-10 02:56:39,437
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 02:58:39,224
+__init__:Using selector: EpollSelector:2021-06-10 02:58:39,226
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 02:59:06,030
+__init__:Using selector: EpollSelector:2021-06-10 02:59:06,032
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 03:00:06,077
+__init__:Using selector: EpollSelector:2021-06-10 03:00:06,079
+trigger_reload:/app/patient_managment/templates/admin/base.html changed, reloading.:2021-06-10 03:00:15,726
+__init__:Using selector: EpollSelector:2021-06-10 03:00:15,727
+log_response:Not Found: /en/admin/log:2021-06-10 03:00:19,227
+trigger_reload:/app/patient_managment/urls.py changed, reloading.:2021-06-10 03:02:54,481
+__init__:Using selector: EpollSelector:2021-06-10 03:02:54,485
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:02:57,813
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"accounts/admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/admin/log.html
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:05:29,219
+__init__:Using selector: EpollSelector:2021-06-10 03:05:29,221
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:05:31,448
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"admin/accounts/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/accounts/log.html
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:06:39,296
+__init__:Using selector: EpollSelector:2021-06-10 03:06:39,298
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:06:41,722
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"patient_managment/templates/admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: patient_managment/templates/admin/log.html
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:06:51,942
+__init__:Using selector: EpollSelector:2021-06-10 03:06:51,943
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:06:53,805
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"/admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /admin/log.html
+trigger_reload:/app/patient_managment/templates/admin changed, reloading.:2021-06-10 03:07:56,007
+__init__:Using selector: EpollSelector:2021-06-10 03:07:56,007
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:08:00,586
+__init__:Using selector: EpollSelector:2021-06-10 03:08:00,589
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:08:05,141
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+trigger_reload:/app/patient_managment/templates/log.html changed, reloading.:2021-06-10 03:08:34,426
+__init__:Using selector: EpollSelector:2021-06-10 03:08:34,429
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:08:36,655
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin:accounts:base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin:accounts:base_site.html
+trigger_reload:/app/patient_managment/templates/log.html changed, reloading.:2021-06-10 03:08:45,071
+__init__:Using selector: EpollSelector:2021-06-10 03:08:45,072
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:08:47,077
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: admin:base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: admin:base_site.html
+trigger_reload:/app/patient_managment/templates/log.html changed, reloading.:2021-06-10 03:09:09,846
+__init__:Using selector: EpollSelector:2021-06-10 03:09:09,847
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:09:20,064
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: accounts:base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: accounts:base_site.html
+trigger_reload:/app/patient_managment/apps/accounts/admin.py changed, reloading.:2021-06-10 03:10:24,959
+__init__:Using selector: EpollSelector:2021-06-10 03:10:24,961
+trigger_reload:/app/patient_managment/templates/admin changed, reloading.:2021-06-10 03:11:22,975
+__init__:Using selector: EpollSelector:2021-06-10 03:11:22,977
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:11:55,856
+__init__:Using selector: EpollSelector:2021-06-10 03:11:55,858
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:11:59,231
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"accounts/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/log.html
+trigger_reload:/app/patient_managment/views.py changed, reloading.:2021-06-10 03:12:07,505
+__init__:Using selector: EpollSelector:2021-06-10 03:12:07,506
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:12:09,500
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: accounts:base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: accounts:base_site.html
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:12:20,147
+__init__:Using selector: EpollSelector:2021-06-10 03:12:20,148
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:12:21,967
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:13:12,094
+__init__:Using selector: EpollSelector:2021-06-10 03:13:12,096
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:13:14,171
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 129, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base_site.html
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:13:39,850
+__init__:Using selector: EpollSelector:2021-06-10 03:13:39,851
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:15:49,394
+__init__:Using selector: EpollSelector:2021-06-10 03:15:49,396
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:20:32,023
+__init__:Using selector: EpollSelector:2021-06-10 03:20:32,025
+log_response:Not Found: /en/admin/test.log:2021-06-10 03:20:41,509
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:21:30,023
+__init__:Using selector: EpollSelector:2021-06-10 03:21:30,025
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:25:12,344
+__init__:Using selector: EpollSelector:2021-06-10 03:25:12,346
+log_response:Not Found: /en/admin/test.log:2021-06-10 03:25:17,628
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:25:45,165
+__init__:Using selector: EpollSelector:2021-06-10 03:25:45,167
+log_response:Not Found: /en/admin/test.txt:2021-06-10 03:25:47,995
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:26:35,119
+__init__:Using selector: EpollSelector:2021-06-10 03:26:35,120
+log_response:Not Found: /en/admin/test.log:2021-06-10 03:26:38,176
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:26:43,723
+__init__:Using selector: EpollSelector:2021-06-10 03:26:43,724
+log_response:Not Found: /en/admin/test.txt:2021-06-10 03:26:45,460
+log_response:Not Found: /en/admin/test.txt:2021-06-10 03:26:46,152
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:27:36,713
+__init__:Using selector: EpollSelector:2021-06-10 03:27:36,714
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:39,898
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:40,447
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:40,607
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:40,763
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:40,898
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:27:41,041
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:28:22,639
+__init__:Using selector: EpollSelector:2021-06-10 03:28:22,640
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:28:55,480
+__init__:Using selector: EpollSelector:2021-06-10 03:28:55,483
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:29:12,186
+__init__:Using selector: EpollSelector:2021-06-10 03:29:12,189
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:31:24,775
+__init__:Using selector: EpollSelector:2021-06-10 03:31:24,777
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:31:29,720
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:31:42,481
+__init__:Using selector: EpollSelector:2021-06-10 03:31:42,482
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:31:50,119
+__init__:Using selector: EpollSelector:2021-06-10 03:31:50,122
+log_response:Not Found: /en/admin/patient-managment/raki.txt:2021-06-10 03:31:51,830
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:32:53,164
+__init__:Using selector: EpollSelector:2021-06-10 03:32:53,165
+log_response:Internal Server Error: /en/admin/log:2021-06-10 03:32:55,854
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/patient_managment/views.py", line 7, in log
+    return render(request,"admin/log.html")
+  File "/usr/local/lib/python3.9/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.9/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 278, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.9/site-packages/django/template/loader_tags.py", line 216, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.9/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 5: 'static', expected 'endblock'. Did you forget to register or load this tag?
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:33:12,915
+__init__:Using selector: EpollSelector:2021-06-10 03:33:12,915
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:33:53,807
+__init__:Using selector: EpollSelector:2021-06-10 03:33:53,810
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:34:21,598
+__init__:Using selector: EpollSelector:2021-06-10 03:34:21,600
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:34:49,384
+__init__:Using selector: EpollSelector:2021-06-10 03:34:49,386
+log_response:Not Found: /raki.txt:2021-06-10 03:34:51,942
+log_response:Not Found: /path_to_text_file/text.txt:2021-06-10 03:34:52,860
+log_response:Not Found: /raki.txt:2021-06-10 03:34:54,165
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:35:08,109
+__init__:Using selector: EpollSelector:2021-06-10 03:35:08,112
+log_response:Not Found: /en/admin/raki.txt:2021-06-10 03:35:09,908
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 03:35:40,932
+__init__:Using selector: EpollSelector:2021-06-10 03:35:40,939

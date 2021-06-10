@@ -1,0 +1,10 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+{% block title %}Home{% endblock %} 
+
+{%block content %} 
+<object data="{% static 'test.txt' %}" type="text/plain"
+width="500" style="height: 500px;width: 800px;;background-color: white;">
+<a href="/path_to_text_file/text.txt">No Support?</a>
+</object>
+{% endblock %}

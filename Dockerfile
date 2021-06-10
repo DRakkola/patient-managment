@@ -12,6 +12,7 @@ RUN apt-get update && \
     musl-dev \
     openssl \
     postgresql \
+    apt-get -y install tesseract-ocr \
     libpq-dev
 
 COPY requirements/prod.txt ./requirements/prod.txt

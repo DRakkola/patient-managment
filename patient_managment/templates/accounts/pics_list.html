@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block title %}Home{% endblock %} 
+{%block content %}
+{% for image in object_list %}
+
+<div class="container row">
+  <div class="col">
+    <img src="{{image.pic.url}}" alt="" style="width: 300px;margin-right: 10px;">
+    <span style="font-size: larger;font-weight: bold;">
+      {{image.discription}} 
+    </span>
+  </div>
+</div>
+{% endfor %}
+<a href="{% url 'accounts:add_image' %}">link</a>
+{% endblock %}

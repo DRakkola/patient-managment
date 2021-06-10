@@ -1,0 +1,9 @@
+patient_profile: Mark :accesed:by:root:2021-06-10 03:35:53,578
+patient_profile: Mark :accesed:by:root:2021-06-10 03:35:55,581
+patient_form: form#90:dossier#6:added:by:root:2021-06-10 03:36:09,769
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:36:38,991
+__init__:Using selector: EpollSelector:2021-06-10 03:36:38,993
+trigger_reload:/app/patient_managment/templates/admin/log.html changed, reloading.:2021-06-10 03:36:49,657
+__init__:Using selector: EpollSelector:2021-06-10 03:36:49,661
+trigger_reload:/app/patient_managment/apps/accounts/views.py changed, reloading.:2021-06-10 03:37:15,416
+__init__:Using selector: EpollSelector:2021-06-10 03:37:15,419

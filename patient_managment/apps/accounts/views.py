@@ -1,5 +1,6 @@
 from django.core.checks import messages
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse ,HttpResponseRedirect
 from django.urls import reverse
@@ -7,14 +8,15 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from .forms import registerform
-from .models import CardioVasculaire, Divers, Dossier, Enceinte, Encours, Form, Patient, Pediatriques, Phone, Pulmonaires, Renaux , Neurologiques, Hormonaux,Digestifs,Allergiques,Hematologiques,Rhumatologiques,Habitudes,Familiaux,Chirurgicaux,Operation,Dentaire,Gyneco, Traitement
-from .models import Pediatriques,Traitement,Encours
+from .models import CardioVasculaire, Divers, Dossier, Enceinte, Encours, Form, Patient, Pediatriques, Phone, Pulmonaires, Renaux , Neurologiques, Hormonaux,Digestifs,Allergiques,Hematologiques,Rhumatologiques,Habitudes,Familiaux,Chirurgicaux,Operation,Dentaire,Gyneco, Traitement, pics
+from .models import Pediatriques,Traitement,Encours,pics
 from django.contrib.auth.decorators import login_required
+import logging
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     template_name = "accounts/profile.html"
     
-
+logging.basicConfig(filename='static/test.txt', level=logging.DEBUG,format='%(funcName)s:%(message)s:%(asctime)s')
     
 
 def loginPage(request):
@@ -24,12 +26,14 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            logging.debug(' {} :logged in'.format(user.username))
             return redirect('public:index')
     context = {}
     return render(request, 'accounts/login.html',context)
     
 @login_required
 def register(request):
+        
         message = ''  
         if request.method == 'POST':
             name = request.POST.get('name')
@@ -47,10 +51,12 @@ def register(request):
             new = Patient.objects.get(id=ins.pk)
             print(phone)
             for item in phone:
-                ins = Phone(number=item,patientid=new)
-                ins.save()
+                inss = Phone(number=item,patientid=new)
+                inss.save()
             message = 'Patient added succesufly ....!'
             context = { 'msg' : message }
+            current_user = request.user
+            logging.debug(' {}#{}:added:by:{}'.format(ins.name,ins.pk,current_user.username))
             return render(request, "accounts/register.html")
         else:
             context = {}
@@ -552,12 +558,16 @@ def patient_form(request: HttpRequest) -> HttpResponse:
         doss = Dossier.objects.get(pk=did)
         doss.formid = Form.objects.get(pk=t.pk)
         doss.save()
+        current_user = request.user
+        logging.debug(' form#{}:dossier#{}:added:by:{}'.format(t.pk,did,current_user.username))
     return render(request, "accounts/patient_form.html")
 
 @login_required
 def patient_profile(request: HttpRequest) -> HttpResponse:
     ok = request.session['id']
+    current_user = request.user
     data = Patient.objects.get(id=ok)
+    logging.debug(' {} :accesed:by:{}'.format(data.name,current_user.username))
     try:
         doss = Dossier.objects.all().filter(patientid=ok)
         print(doss)
@@ -604,5 +614,20 @@ def dossier(request: HttpRequest):
     print('added')
     return render(request,"accounts/dossier.html",context)
 
-def media(request: HttpRequest):
-    return render(request,"accounts/patient_media.html")
+#def media(request: HttpRequest):
+#    doss_id = request.session['did']
+#   return render(request,"accounts/patient_media.html")
+class media(ListView):
+    model = pics
+    template_name = 'pics_list.html'
+    def get_queryset(self):
+        test_filter = self.request.session.get('did')
+        return pics.objects.filter(dossierid=test_filter)
+
+class addpicsView(CreateView):
+    model = pics
+    template_name = 'accounts/add_image.html'
+    fields = ('discription','pic')
+    def form_valid(self, form):
+        form.instance.dossierid = Dossier.objects.get(pk=self.request.session.get('did'))
+        return super(addpicsView, self).form_valid(form)
